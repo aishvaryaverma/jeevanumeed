@@ -407,11 +407,11 @@
         &:after {
             content: "";
             position: absolute;
-            top: 5px;
+            top: .5rem;
             right: 0;
             transform: translate(50%, -50%);
-            width: 200px;
-            height: 200px;
+            width: 20rem;
+            height: 20rem;
             background: transparent url(../img/fundraisingStories/fundraisingStories-topRight.png) no-repeat center center / auto 100%;
         }
 
@@ -500,7 +500,7 @@
         padding-bottom: 5rem;
 
         .topFundraiserItem {
-            margin-right: 20px;
+            margin-right: 2rem;
             border-radius: .75rem;
             overflow: hidden;
 
@@ -571,10 +571,10 @@
 
                     .donationProgressbar {
                         width: 100%;
-                        height: 7px;
+                        height: .7rem;
                         position: relative;
                         overflow: hidden;
-                        border-radius: 5px;
+                        border-radius: .5rem;
                         background-color: #e6e6e6;
 
                         .ProgressbarPercent {
@@ -603,7 +603,7 @@
                         line-height: 1.2;
                         font-size: 1.8rem;
                         letter-spacing: 0.01rem;
-                        padding: 10px 30px;
+                        padding: 1rem 3rem;
                         width: 100%;
                     }
                 }
@@ -630,8 +630,8 @@
                         a {
                             display: flex;
                             margin: 0 .5rem;
-                            width: 25px;
-                            height: 25px;
+                            width: 2.5rem;
+                            height: 2.5rem;
 
                             img {
                                 width: 100%;
@@ -659,7 +659,7 @@
 }
 
 .yourSupport {
-    margin: 20px;
+    margin: 2rem;
     text-align: center;
     background: $white_color url(../img/yourSupport/yourSupport-bg.jpg) no-repeat left top / cover;
     padding: 8rem 0;
@@ -691,8 +691,8 @@
 .upcomingEvents {
 
     .container-fluid {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 
     &__heading {
@@ -745,11 +745,11 @@
     }
 
     &__slider {
-        margin-right: -20px;
+        margin-right: -2rem;
 
         .upcomingEventsItem {
             position: relative;
-            margin-right: 20px;
+            margin-right: 2rem;
             text-align: center;
 
             &__img {
@@ -780,6 +780,16 @@
                     text-transform: uppercase;
                 }
 
+                .address {
+                    font-size: 1.6rem;
+                    font-family: $primary_font;
+                    font-weight: 400;
+                    line-height: 1.5;
+                    color: $white_color;
+                    letter-spacing: 0.01rem;
+                    margin: 0;
+                }
+
                 .discription {
                     font-size: 1.6rem;
                     font-family: $primary_font;
@@ -806,7 +816,7 @@
                         line-height: 1.2;
                         font-size: 1.6rem;
                         letter-spacing: 0.02rem;
-                        padding: 10px 30px;
+                        padding: 1rem 3rem;
                         margin: 1rem 0 0;
                     }
                 }
@@ -817,7 +827,7 @@
                         opacity: 1;
                         visibility: visible;
                         transform: scaleY(1);
-                        height: 49px;
+                        height: 4.9rem;
                     }
                 }
             }
@@ -825,16 +835,16 @@
 
         .slick-prev {
             background: transparent url(../img/upcomingEvents/slickprev-img.png) no-repeat left top / 100%;
-            width: 45px;
-            height: 45px;
+            width: 4.5rem;
+            height: 4.5rem;
             z-index: 9;
-            left: -20px;
+            left: -2rem;
         }
 
         .slick-next {
             background: transparent url(../img/upcomingEvents/slicknext-img.png) no-repeat left top / 100%;
-            width: 45px;
-            height: 45px;
+            width: 4.5rem;
+            height: 4.5rem;
             z-index: 9;
             right: 0;
         }
@@ -883,6 +893,16 @@
                     text-transform: uppercase;
                 }
 
+                .address {
+                    font-size: 1.6rem;
+                    font-family: $primary_font;
+                    font-weight: 400;
+                    line-height: 1.5;
+                    color: $white_color;
+                    letter-spacing: 0.01rem;
+                    margin: 0;
+                }
+
                 .discription {
                     font-size: 1.6rem;
                     font-family: $primary_font;
@@ -909,7 +929,7 @@
                         line-height: 1.2;
                         font-size: 1.6rem;
                         letter-spacing: 0.02rem;
-                        padding: 10px 30px;
+                        padding: 1rem 3rem;
                         margin: 1rem 0 0;
                     }
                 }
@@ -920,7 +940,7 @@
                         opacity: 1;
                         visibility: visible;
                         transform: scaleY(1);
-                        height: 49px;
+                        height: 4.9rem;
                     }
                 }
             }

@@ -7,7 +7,9 @@ const path = './src/pages/';
 const pages = [
 	path + "index.html",
 	path + "events.html",
-	path + "about-us.html"
+	path + "about-us.html",
+	path + "becomepartner.html",
+	path + "contact-us.html"
 ];
 
 // FOR HTML PAGES

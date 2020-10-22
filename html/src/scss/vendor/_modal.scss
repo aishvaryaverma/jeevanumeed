@@ -1,17 +1,17 @@
 .modal.fade {
-	padding: 60px 0;
+	padding: 6rem 0;
 	background: rgba(0, 0, 0, 0.60);
 	
 	.modal-dialog {
 		width: 90%;
 		margin: 0 auto;
 		max-width: 775px;
-		&.md { max-width: 600px; }
+		&.md { max-width: 60rem; }
 
 		.modelClose {
 			position: absolute;
-			top: 20px;
-			right: 20px;
+			top: 2rem;
+			right: 2rem;
 			z-index: 10;
 			line-height: 1px;
 			
@@ -31,7 +31,7 @@
 		}
 
 		@media (max-width: $mobileBig) {
-			max-width: 450px;
+			max-width: 45rem;
 		}
 	}
 }
@@ -68,10 +68,10 @@
 
 	.contentBox {
 		position: relative;
-		width: 500px;
-		padding: 40px;
+		width: 50rem;
+		padding: 4rem;
 
-		&.full-width { width: 100%; padding: 30px; }
+		&.full-width { width: 100%; padding: 3rem; }
 
 		.btnVerify {
 			text-align: center;
@@ -82,7 +82,7 @@
 				font-family: $secondary_font;
 				font-size: 16px;
 				color: #212121;
-				padding: 20px;
+				padding: 2rem;
 				line-height: .3;
 
 				&:hover {
@@ -93,12 +93,12 @@
 		
 		@media (max-width: $mobileBig) {
 			width: 100%;
-			padding: 30px;
+			padding: 3rem;
 		}
 	}
 
 	.checkIcon {
-		padding: 30px 0;
+		padding: 3rem 0;
 		text-align: center;
 
 		i {
@@ -194,7 +194,7 @@
 
 			position: absolute;
 			top: 50%;
-			right: 10px;
+			right: 1rem;
 			transform: translateY(-50%);
 			background-color: transparent;
 			border: none;
@@ -265,7 +265,7 @@
 				.form-control {
 					border: none;
 					border-radius: 0;
-					padding: 0 0 10px;
+					padding: 0 0 1rem;
 					border-bottom: 1px solid rgba(#8b8b8b, 0.82);
 
 					font-size: 1.6rem;
@@ -312,6 +312,87 @@
 					}
 				}
 			}
+		}
+	}
+}
+
+.eventsModal {
+
+	.modal-body {
+		position: relative;
+		padding: 4rem 4rem;
+		border: none;
+
+		.modal-close {
+			font-family: $primary_font;
+			font-size: 1.7rem;
+			line-height: 1.2;
+			font-weight: 300;
+			color: #8e8e8e;
+
+			position: absolute;
+			top: 15px;
+			right: 15px;
+			background-color: transparent;
+			border: none;
+			border-radius: 50%;
+
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+
+	&__img {
+		margin-bottom: 3rem;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__content {
+		width: 100%;
+
+		.heading {
+			font-size: 3rem;
+			font-family: $secondary_font;
+			font-weight: 800;
+			line-height: 1.2;
+			color: $black_color;
+			letter-spacing: 0.02rem;
+			margin: 0 0 2rem;
+		}
+
+		.address {
+			font-size: 1.8rem;
+			font-family: $primary_font;
+			font-weight: 500;
+			line-height: 1.5;
+			color: $secondary_color;
+			letter-spacing: 0.01rem;
+			margin: 0 0 2rem;
+		}
+
+		.discription {
+			font-size: 1.6rem;
+			font-family: $primary_font;
+			font-weight: 300;
+			line-height: 1.5;
+			color: $black_color;
+			letter-spacing: 0.01rem;
+			margin: 0 0 2rem;
+		}
+		
+		.interested-btn {
+			border-radius: .3rem;
+			text-transform: uppercase;
+			font-family: $primary_font;
+			font-weight: 700;
+			line-height: 1.2;
+			font-size: 1.6rem;
+			letter-spacing: 0.02rem;
+			padding: 1rem 3rem;
 		}
 	}
 }

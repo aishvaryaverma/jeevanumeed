@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./layouts/_head.html', {
+        "title": "Become A Partner",
+        "description": ""
+    })
+</head>
+<body class="innerPage">
+    <main class="wrapper" role="main">
+        @@include('./layouts/_header.html')
+
+        <section class="staticBanner contactusPage">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="contactusPage__main">
+                            <div class="contactusPage__form">
+                                <h3><span class="secondary_color">Contact Us</span></h3>
+                                <form>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" placeholder="Email">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <input type="tel" class="form-control" placeholder="Phone">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <textarea class="form-control" placeholder="Message"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="row">
+                                                <div class="col-lg-6 text-left">
+                                                    <img src="img/contactus/google-captcha.jpg">
+                                                </div>
+                                                <div class="col-lg-6 text-right">
+                                                    <button type="submit" class="btn btn-primary submit-btn">Submit <span><img src="img/contactus/arrow-right.png" alt=""></span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        @@include('./layouts/_footer.html')
+    </main>
+    
+    @@include('./layouts/_scripts.html')
+</body>
+</html>

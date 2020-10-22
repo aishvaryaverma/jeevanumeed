@@ -1,0 +1,151 @@
+.contactusPage {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &__main {
+        background-color: rgba(#e8eaec, 0.80);
+        padding: 4rem;
+        box-shadow: 0 0 10px 2px rgba($black_color, 0.13);
+        border-radius: 10px;
+
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    &__form {
+
+        h3 {
+            font-size: 3.5rem;
+            font-family: $secondary_font;
+            font-weight: 300;
+            line-height: 1.2;
+            color: #212121;
+            letter-spacing: 0.01rem;
+            margin: 0 0 2rem;
+
+            span {
+                display: inline-block;
+                font-family: $quaternary_font;
+                font-weight: 400;
+                line-height: 1.2;
+                color: $white_color;
+            }
+        }
+
+        form {
+
+            .form-group {
+                margin-bottom: 3rem;
+
+                .form-control {
+                    border: none;
+                    border-radius: 7.5px;
+                    padding: 1.2rem 1.8rem;
+                    box-shadow: none;
+
+                    font-size: 1.6rem;
+                    font-family: $secondary_font;
+                    font-weight: 300;
+                    line-height: 1.2;
+                    letter-spacing: 0.01rem;
+                    color: #3f3e3f;
+                    resize: none;
+
+                    &::-webkit-input-placeholder {
+                        font-size: 1.6rem;
+                        font-family: $secondary_font;
+                        font-weight: 300;
+                        line-height: 1.2;
+                        letter-spacing: 0.01rem;
+                        color: #3f3e3f;
+                    }
+
+                    &::-moz-placeholder {
+                        font-size: 1.6rem;
+                        font-family: $secondary_font;
+                        font-weight: 300;
+                        line-height: 1.2;
+                        letter-spacing: 0.01rem;
+                        color: #3f3e3f;
+                    }
+
+                    &:-ms-input-placeholder {
+                        font-size: 1.6rem;
+                        font-family: $secondary_font;
+                        font-weight: 300;
+                        line-height: 1.2;
+                        letter-spacing: 0.01rem;
+                        color: #3f3e3f;
+                    }
+
+                    &:-moz-placeholder {
+                        font-size: 1.6rem;
+                        font-family: $secondary_font;
+                        font-weight: 300;
+                        line-height: 1.2;
+                        letter-spacing: 0.01rem;
+                        color: #3f3e3f;
+                    }
+                }
+            }
+
+            .submit-btn {
+                color: $white_color;
+                background: #0078d8;
+                display: inline-flex;
+                border: none;
+                outline: none;
+                line-height: 1;
+                box-shadow: none;
+                border-radius: 3rem;
+                justify-content: center;
+                padding: 1.5rem 7rem 1.5rem 3rem;
+                font-family: $primary_font;
+                font-weight: 700;
+                text-transform: none;
+                transition: all 0.2s ease-out;
+                letter-spacing: 0;
+                font-size: 1.6rem;
+                position: relative;
+                overflow: visible;
+
+                span {
+                    position: absolute;
+                    top: -0.6rem;
+                    right: -0.5rem;
+                    width: 6rem;
+                    height: 6rem;
+                    border-radius: 100%;
+                    background-color: #53a9ed;
+                    border: solid 0.7rem #3397e7;
+                    z-index: 1;
+                    transition: all 0.2s;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        width: 18px;
+                    }
+                }
+
+                &:before {
+                    display: none;
+                }
+
+                &:hover {
+                    color: $white_color;
+                    background: #0078d8;
+
+                    span {
+                        right: -1rem;
+                    }
+                }
+            }
+        }
+    }
+}
