@@ -1,0 +1,14 @@
+.wrapper {
+	width: 100%;
+	overflow: hidden;
+}
+
+.container {
+	margin: 0 auto;
+	width: 96%;
+	max-width: 1400px;
+
+	@media (max-width: $desktopSmall - 1) {
+		width: 100%;
+	}
+}

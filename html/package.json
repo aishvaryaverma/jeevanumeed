@@ -1,0 +1,50 @@
+{
+	"name": "bharatludo",
+	"version": "1.0.0",
+	"description": "HTML of Bharat Ludo",
+	"main": "index.js",
+	"scripts": {
+		"start": "npm-run-all --parallel dev:*",
+		"build": "gulp build",
+		"dev:gulp": "gulp watch",
+		"dev:server": "live-server --watch=build --open=build --ignore=src",
+		"runbuild": "live-server --open=build"
+	},
+	"author": "Charanjeet Singh Gill",
+	"license": "MIT",
+	"dependencies": {
+		"del": "^5.1.0",
+		"gulp": "^4.0.2",
+		"gulp-imagemin": "^7.1.0",
+		"gulp-install": "^1.1.0",
+		"live-server": "^1.2.1"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.7.7",
+		"@babel/preset-env": "^7.7.7",
+		"@babel/register": "^7.7.7",
+		"gulp-autoprefixer": "^7.0.1",
+		"gulp-babel": "^8.0.0",
+		"gulp-clean-css": "^4.2.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-file-include": "^2.1.1",
+		"gulp-rename": "^2.0.0",
+		"gulp-sass": "^4.0.2",
+		"gulp-sourcemaps": "^2.6.5",
+		"gulp-uglify": "^3.0.2",
+		"npm-run-all": "^4.1.5"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all",
+			"last 10 versions"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
+}

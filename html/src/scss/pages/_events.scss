@@ -1,0 +1,21 @@
+.eventsPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 45rem;
+    text-align: center;
+
+    h2 {
+        font-size: 5rem;
+        font-family: $secondary_font;
+        font-weight: 700;
+        line-height: 1.2;
+        color: $white_color;
+        margin: 0 0 1.5rem;
+
+        @media (max-width: $mobileBig) {
+            font-size: 4.5rem;
+        }
+    }
+}

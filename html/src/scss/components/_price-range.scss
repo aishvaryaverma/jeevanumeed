@@ -1,0 +1,30 @@
+.priceRangeFilter {
+    position: relative;
+    z-index: 1;
+    padding: 25px 0 0;
+
+    &__cancel {
+        position: absolute;
+        top: -45px;
+        right: 0;
+        font-size: 15px;
+        cursor: pointer;
+        color: $secondary_color;
+    }
+
+    &__dropdown {
+        display: flex;
+        padding-top: 20px;
+        align-items: center;
+        justify-content: space-between;
+
+        span {
+            font-size: 15px;
+            padding: 0 10px;
+        }
+        .form-control {
+            padding: 4px 7px;
+            cursor: pointer;
+        }
+    }
+}

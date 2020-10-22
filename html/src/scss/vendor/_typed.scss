@@ -1,0 +1,26 @@
+@include keyframes(move) {
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+
+.typed-cursor {
+	display:none;
+	font-size:70px;
+	opacity: 1;
+	font-weight: 100;
+	@include animation(move 0.5s ease infinite alternate);
+	
+	@media (max-width:$tablet) {
+		font-size:70px;
+	}
+	@media (max-width:$mobileBig) {
+		font-size:40px;
+	}
+}
+
+.typed-fade-out{
+	opacity: 0;
+	animation: 0;
+	transition: opacity .25s;
+}

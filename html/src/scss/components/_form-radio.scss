@@ -1,0 +1,92 @@
+.form-yesno {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    
+    label {
+        display: flex;
+        font-size: 15px;
+        cursor: pointer;
+        margin: 0 0 0 15px;
+        align-items: center;
+        
+        &:first-child { margin: 0; }
+
+        input {
+            position: absolute;
+            opacity: 0;
+        }
+
+        .text {
+            font-size: 16px;
+            user-select: none;
+            color: $primary_color;
+
+            @media screen and (max-width: $desktopSmall) {
+                font-size: 14px;
+            }
+        }
+        
+        .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 16px;
+            height: 16px;
+            margin: 0 8px 0 0;
+            border-radius: 50%;
+            border: 1px solid $primary_color;
+
+            &:before {
+                content: '';
+                width: 8px;
+                height: 8px;
+                background: $secondary_color;
+                border-radius: 50%;
+                opacity: 0;
+                transition: all .25s ease-out;
+            }
+        }
+
+        input:checked + .icon {
+            border-color: $secondary_color;
+            &:before  { opacity: 1; }
+        }
+    }
+
+    &--column {
+        flex-direction: column;
+        label { width: 100%; margin: 15px 0 0; }
+    }
+
+    &--square {
+        label {
+            .icon {
+                border-radius: 0;
+
+                &:before { border-radius: 0; }
+            }
+        }
+    }
+    &--smallSize {
+        label {
+            margin-top: 7px;
+
+            .icon {
+                width: 14px;
+                height: 14px;
+
+                &:before {
+                    width: 8px;
+                    height: 8px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: $mobileMed) {
+        flex-direction: column;
+        label { width: 100%; margin: 15px 0 0; }
+    }
+}

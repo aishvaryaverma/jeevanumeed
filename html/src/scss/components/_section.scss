@@ -1,0 +1,117 @@
+.section {
+	padding-top: 80px;
+	padding-bottom: 80px;
+
+	&.nopadding {
+		padding: 0 !important;
+	}
+	&.nopadding--top {
+		padding-top: 0 !important;
+	}
+	&.nopadding--bottom {
+		padding-bottom: 0 !important;
+	}
+
+	// Sizes
+	&.sm {
+		padding-top: 40px;
+		padding-bottom: 40px;
+
+		@media (max-width: $tablet) {
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+	}
+	&.md {
+		padding-top: 60px;
+		padding-bottom: 60px;
+
+		@media (max-width: $desktop) {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+		@media (max-width: $tablet) {
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+		@media (max-width: $mobileBig) {
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+	}
+	&.xl {
+		padding-top: 100px;
+		padding-bottom: 100px;
+
+		@media (max-width: $desktop) {
+			padding-top: 80px;
+			padding-bottom: 80px;
+		}
+		@media (max-width: $tablet) {
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+		@media (max-width: $mobileBig) {
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+	}
+	&.xxl {
+		padding-top: 120px;
+		padding-bottom: 120px;
+
+		@media (max-width: $laptop) {
+			padding-top: 100px;
+			padding-bottom: 100px;
+		}
+		@media (max-width: $desktop) {
+			padding-top: 80px;
+			padding-bottom: 80px;
+		}
+		@media (max-width: $tablet) {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+		@media (max-width: $mobileBig) {
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+	}
+
+	&.travelPadding {
+		padding: 150px 0 60px;
+	}
+
+	// Bg colors
+	&.white {
+		background: white;
+	}
+	&.dark {
+		background: #353535;
+	}
+	&.primary {
+		background: $primary_color;
+	}
+	&.secondary {
+		background: $secondary_color;
+	}
+	&.light {
+		background: $light_color;
+	}
+	&.light__grey {
+		background: #dee2e2;
+	}
+	
+	@media (max-width: $desktop) {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	@media (max-width: $tablet) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	@media (max-width: $mobileBig) {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+}

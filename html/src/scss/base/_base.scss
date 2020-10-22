@@ -1,0 +1,92 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+html {
+	// scroll-behavior: smooth;
+	font-size: 10px;
+}
+
+body {
+	font-family: $primary_font;
+	font-size: 25px;
+	line-height: 36px;
+	color: #414141;
+	font-weight: normal;
+	overflow-x: hidden;
+	
+	&.lockScroll {
+		overflow: hidden;
+	}
+}
+
+img { max-width:100%; }
+
+a {
+	color:$primary_color;
+	@include css3Transition(400ms);
+	
+	&:hover {
+		text-decoration:none;
+	}
+
+	&.secondary {
+		color: $secondary_color;
+
+		&:hover {
+			color: #333333;
+		}
+	}
+	&.bold {
+		font-family: $secondary_font;
+		color: $primary_color;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+hr {
+	margin: 20px 0;
+	border-color: #cacaca;
+
+	&.darkBorder {
+		border-color: #999;
+	}
+
+	&.extraSpace {
+		margin: 40px 0;
+	}
+}
+
+// Hide HTML5 Up and Down arrows
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+	background: #f1f1f1; 
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: $primary_color;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: darken($color: $primary_color, $amount: 5);
+}

@@ -1,0 +1,13 @@
+.staticBanner {
+    min-height: 32rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &.eventsPage {
+        background-image: url(../img/backgrounds/events-bg.jpg);
+    }
+
+    &.aboutusPage {
+        background-image: url(../img/backgrounds/aboutus-bg.jpg);
+    }
+}

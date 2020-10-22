@@ -1,0 +1,256 @@
+.aboutusPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 45rem;
+    text-align: center;
+
+    h3 {
+        font-size: 5rem;
+        font-family: $secondary_font;
+        font-weight: 700;
+        line-height: 1.5;
+        color: $white_color;
+        margin: 0;
+
+        span {
+            display: block;
+            font-size: 7rem;
+            font-family: $quaternary_font;
+            font-weight: 400;
+            line-height: 1.2;
+            color: $white_color;
+        }
+
+        @media (max-width: $mobileBig) {
+            font-size: 4.5rem;
+        }
+    }
+}
+
+.aboutUs {
+    background: transparent url(../img/aboutus/aboutuspage-bg.png) no-repeat right top -18px / 25.3%;
+
+    &__heading {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        margin: 0 0 4rem;
+
+        h3 {
+            font-size: 4.5rem;
+            font-family: $quaternary_font;
+            font-weight: 400;
+            line-height: 1.2;
+            color: #212121;
+            letter-spacing: 0.01rem;
+            margin: 0 0 2rem;
+        }
+
+        p {
+            font-size: 1.6rem;
+            font-family: $secondary_font;
+            font-weight: 300;
+            line-height: 1.75;
+            color: $black_color;
+            letter-spacing: 0.01rem;
+            margin: 0;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+
+        .aboutUsItem {
+            position: relative;
+            width: calc((100% / 3) - 1.4rem);
+            margin-right: 2.1rem;
+            margin-bottom: 2.1rem;
+            text-align: center;
+            border-right: 1px solid #cdd2d5;
+
+            &:nth-child(3n+3) {
+                margin-right: 0;
+                border-right: none;
+            }
+
+            &__content {
+                width: 100%;
+                padding: 2rem;
+
+                .heading {
+                    font-size: 8rem;
+                    font-family: $secondary_font;
+                    font-weight: 500;
+                    line-height: 1.2;
+                    color: #212121;
+                    letter-spacing: 0.02rem;
+                    margin: 0 0 1rem;
+
+                    span {
+                        font-size: 6rem;
+                        font-weight: 300;
+                    }
+                }
+
+                .discription {
+                    font-size: 2rem;
+                    font-family: $secondary_font;
+                    font-weight: 400;
+                    line-height: 1.5;
+                    color: rgba(#212121, 0.69);
+                    letter-spacing: 0.01rem;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+.ourMission {
+    background: transparent url(../img/aboutus/ourMission-bg.png) no-repeat left bottom / 100%;
+    padding-top: 0;
+    position: relative;
+
+    .transformY50 {
+        transform: translateY(-50px);
+    }
+
+    &__heading {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+
+        background-color: $white_color;
+        padding: 4rem;
+        box-shadow: 0 0 10px 2px rgba($black_color, 0.13);
+
+        .topRightCorner {
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translateY(-20px);
+            z-index: 1;
+        }
+
+        h3 {
+            font-size: 4.5rem;
+            font-family: $quaternary_font;
+            font-weight: 400;
+            line-height: 1.2;
+            color: #212121;
+            letter-spacing: 0.01rem;
+            margin: 0 0 2rem;
+        }
+
+        p {
+            font-size: 1.6rem;
+            font-family: $secondary_font;
+            font-weight: 300;
+            line-height: 1.75;
+            color: $black_color;
+            letter-spacing: 0.01rem;
+            margin: 0;
+        }
+    }
+
+    &__top {
+        margin: 0 0 2rem;
+    }
+
+    &__bottom {}
+}
+
+.awarness {
+
+    &__heading {
+
+        h3 {
+            font-size: 4.5rem;
+            font-family: $quaternary_font;
+            font-weight: 400;
+            line-height: 1.2;
+            color: #212121;
+            letter-spacing: 0.01rem;
+            margin: 0 0 2rem;
+        }
+
+        p {
+            font-size: 1.6rem;
+            font-family: $secondary_font;
+            font-weight: 300;
+            line-height: 1.75;
+            color: $black_color;
+            letter-spacing: 0.01rem;
+            margin: 0;
+        }
+    }
+}
+
+.ourPartners {
+
+    &__heading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+
+        margin: 0 0 4rem;
+
+        h3 {
+            font-size: 4.5rem;
+            font-family: $quaternary_font;
+            font-weight: 400;
+            line-height: 1.2;
+            color: $secondary_color;
+            letter-spacing: 0.01rem;
+            margin: 0 0 2rem;
+        }
+
+        p {
+            font-size: 1.6rem;
+            font-family: $secondary_font;
+            font-weight: 300;
+            line-height: 1.75;
+            color: $black_color;
+            letter-spacing: 0.01rem;
+            margin: 0;
+        }
+    }
+
+    &__logos {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: calc(25% - 15px);
+        margin-right: 20px;
+        box-shadow: 0 0 5px 0 rgba($black_color, 0.22);
+
+        &:nth-child(4n+4) {
+            margin-right: 0;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+
+            img {
+                width: auto;
+                height: auto;
+                max-width: 75%;
+                max-height: 75%;
+            }
+        }
+    }
+}

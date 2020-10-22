@@ -1,0 +1,47 @@
+.primary_color {color: $primary_color !important;}
+.secondary_color {color: $secondary_color !important;}
+.black_color {color: $black_color !important;}
+.red-color {color: $red_color !important;}
+.primary-bg-color {background-color: $primary_color !important;}
+.secondary-bg-color {background-color: $secondary_color !important;}
+.white-bg-color {background-color: $white_color !important;}
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+.uppercase { text-transform:uppercase; }
+.nouppercase { text-transform:none !important; }
+.cursor { cursor: pointer; }
+.boxShadow--Top { box-shadow: 0 -2px 2px 0 rgba(black, 0.03); }
+.boxShadow--Bottom { box-shadow: 0 2px 2px 0 rgba(black, 0.03); }
+.z-top { z-index: 999999 !important; }
+// Customize mCustomScrollbar
+.mCustomScrollBox {
+	padding-right: 15px;
+
+	.mCSB_scrollTools {
+		width: 6px;
+	}
+}
+
+.points_label {
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	font-size: 15px;
+	color: white;
+	line-height: 30px;
+	margin-right: 15px;
+	// padding: 0 15px 0 30px;
+	padding: 0 15px;
+	background: $light_blue;
+	white-space: nowrap;
+
+	// &:before {
+	// 	content: '';
+	// 	position: absolute;
+	// 	top: 0;
+	// 	left: 0;
+	// 	border: 13px solid transparent;
+	// 	border-left-color: white;
+	// }
+}

@@ -1,0 +1,56 @@
+.siteLoaderWrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99991;
+    background-color: rgba(white, 0.98);
+
+    // center align child element
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    // display: none;
+
+    &__container {
+        position: relative;
+        z-index: 1;
+        width: 90px;
+        height: 90px;
+
+        // center align child element
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .spinner1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid $primary_color;
+            // border-bottom: 5px solid $primary_color;
+            animation: spin 600ms linear infinite;
+        }
+        .spinner2 {
+            width: 90px;
+            height: 90px;
+            background: image('logo.png') center center no-repeat;
+            background-size: 50px;
+        }
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@keyframes reverseSpin {
+    0% { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
+}

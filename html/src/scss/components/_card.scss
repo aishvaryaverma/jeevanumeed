@@ -1,0 +1,53 @@
+.custom-card {
+	border: none;
+	background: white;
+	margin-bottom: 40px;
+	// box-shadow: 0 0 10px 4px rgba(#0424c6, 0.15);
+	@include css3BorderRadius(0);
+
+	&.lightBg {
+		background: #fafafa;
+	}
+
+	.card-body {
+		padding: 30px;
+
+		&.padding40 {
+			padding: 40px;
+
+			@media (max-width: $mobileBig) {
+				padding: 25px;
+			}
+		}
+		&.padding60 {
+			padding: 60px;
+
+			@media (max-width: $mobileBig) {
+				padding: 30px;
+			}
+		}
+		&.padding40__90 {
+			padding: 40px 90px;
+			
+			@media (max-width: $laptop - 1) {
+				padding: 40px 30px;
+			}
+			
+			@media (max-width: $tablet) {
+				padding: 30px 40px;
+			}
+
+			@media (max-width: $tabletSmall) {
+				padding: 20px 30px;
+			}
+
+			@media (max-width: $mobileBig) {
+				padding: 30px;
+			}
+		}
+
+		@media (max-width: $mobileBig) {
+			padding: 20px;
+		}
+	}
+}

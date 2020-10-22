@@ -1,0 +1,63 @@
+.simpleTabs {
+	padding: 0;
+
+	.nav {
+		display: flex;
+		align-items: center;
+		margin-bottom: 40px;
+
+		li {
+			display: block;
+			font-size: 18px;
+			margin-left: 40px;
+
+			&:first-child { margin-left: 0; }
+			a {
+				display: block;
+				color: #333333;
+				padding: 12px 0 10px;
+				border-bottom: 3px solid transparent;
+
+				&.active { border-color: $secondary_color; }
+			}
+
+			@media (max-width: $mobileBig) {
+				font-size: 16px;
+				width: 33%;
+				margin-left: 1px;
+				text-align: center;
+			}
+		}
+
+		@media (max-width: $mobileBig) {
+			display: none;
+		}
+	}
+
+	.tab-content {
+		.tab-pane {
+			@media (max-width: $mobileBig) {
+				padding: 20px;
+				border: solid #ddd 1px;
+			}
+		}
+	}
+
+	.handler {
+		display: none;
+		font-size: 16px;
+		line-height: 40px;
+		border: solid #ddd 1px;
+		@include background-gradient($startColor: #ffffff, $endColor: #cccccc);
+
+		a {
+			display: block;
+			color: black;
+			padding: 0 20px;
+		}
+
+		@media (max-width: $mobileBig) {
+			display: block;
+		}
+	}
+}
