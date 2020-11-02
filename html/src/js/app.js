@@ -189,6 +189,8 @@ var dispatch = {
 			$(".donateAmounts li .donateAmount").removeClass("selected");
 			$(this).addClass("selected");
 		});
+
+		// $('.selectpicker').selectpicker();
 	},
 
 	homePage: function () {
@@ -306,10 +308,32 @@ var dispatch = {
 		});
 	},
 
+	startFundraiser: function () {
+		$(document).ready(function () {
+			$("#secondStep, #thirdStep, #fourthStep").hide();
+
+			$("#nextSecondStep").click(function () {
+				$("#firstStep, #thirdStep, #fourthStep").hide();
+				$("#secondStep").show();
+			});
+
+			$("#nextThirdStep").click(function () {
+				$("#firstStep, #secondStep, #fourthStep").hide();
+				$("#thirdStep").show();
+			});
+
+			$("#nextFourthStep").click(function () {
+				$("#firstStep, #secondStep, #thirdStep").hide();
+				$("#fourthStep").show();
+			});
+		});
+	},
+
 	init: function () {
 		this.forcusEffect();
 		this.common();
 		this.homePage();
+		this.startFundraiser();
 	}
 };
 
@@ -331,5 +355,9 @@ $(document).ready(() => {
 		$(".aboutus__list ul li").removeClass("selected");
 	}).on("mouseleave", function () {
 		$(".aboutus__list ul li:nth-child(2)").addClass("selected");
+	});
+
+	$('.btn.dropdown-toggle').click(function () {
+		$(this).next('.dropdown-menu').toggleClass('open');
 	});
 });

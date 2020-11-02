@@ -2491,6 +2491,161 @@ img {
     letter-spacing: 0.02rem;
     padding: 1rem 3rem; }
 
+.startFundraiserModal {
+  overflow: auto; }
+  .startFundraiserModal.fade .modal-dialog {
+    width: 90%;
+    max-width: none;
+    border-radius: 1.5rem;
+    overflow: hidden; }
+  .startFundraiserModal .modal-body {
+    position: relative;
+    padding: 2.5rem;
+    border: none; }
+  .startFundraiserModal h1 {
+    font-size: 2.4rem;
+    letter-spacing: -1px;
+    line-height: 24px;
+    color: #090909;
+    font-weight: 400;
+    padding: 0 2rem 3rem;
+    text-align: center;
+    margin: 0; }
+  .startFundraiserModal__plans {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    .startFundraiserModal__plans .startFundraiserModal__plan {
+      width: calc((100% / 3) - 15px);
+      padding: 2rem;
+      height: auto;
+      border-radius: 8px;
+      filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.17));
+      background-color: #fff; }
+      .startFundraiserModal__plans .startFundraiserModal__plan .startFundraiserModal__name h2 {
+        font-size: 2rem;
+        letter-spacing: 0;
+        color: #090909;
+        font-weight: 700;
+        margin: 0; }
+      .startFundraiserModal__plans .startFundraiserModal__plan .startFundraiserModal__name .plan-divider {
+        border-top: 4px solid #21936a;
+        width: 57px;
+        display: table-caption;
+        margin: 1.5rem 0; }
+      .startFundraiserModal__plans .startFundraiserModal__plan .startFundraiserModal__name .recommended-tag {
+        position: absolute;
+        top: -29px;
+        right: 0; }
+      .startFundraiserModal__plans .startFundraiserModal__plan .startFundraiserModal__fees {
+        letter-spacing: -1px;
+        line-height: 20px;
+        color: #090909; }
+        .startFundraiserModal__plans .startFundraiserModal__plan .startFundraiserModal__fees h3 {
+          font-weight: 600;
+          font-size: 3.6rem;
+          margin: 0;
+          font-family: "Raleway", sans-serif; }
+        .startFundraiserModal__plans .startFundraiserModal__plan .startFundraiserModal__fees span {
+          font-size: 1.4rem;
+          letter-spacing: 1px;
+          line-height: 28px; }
+      .startFundraiserModal__plans .startFundraiserModal__plan .startFundraiserModal__features ul {
+        margin: 0 0 2rem;
+        display: flex;
+        flex-direction: column; }
+        .startFundraiserModal__plans .startFundraiserModal__plan .startFundraiserModal__features ul li {
+          display: block;
+          font-family: "Raleway", sans-serif;
+          font-size: 1.4rem;
+          letter-spacing: 0;
+          line-height: 1.5;
+          color: #525252;
+          font-weight: 400;
+          position: relative;
+          padding-left: 2.5rem;
+          margin-bottom: 1rem; }
+          .startFundraiserModal__plans .startFundraiserModal__plan .startFundraiserModal__features ul li::after {
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: 0;
+            transform: translateY(-50%);
+            width: 16px;
+            height: 16px; }
+          .startFundraiserModal__plans .startFundraiserModal__plan .startFundraiserModal__features ul li.valid::after {
+            background: transparent url(../img/startfundraiser/green-tick.png) no-repeat center center/100%; }
+          .startFundraiserModal__plans .startFundraiserModal__plan .startFundraiserModal__features ul li.notvalid::after {
+            background: transparent url(../img/startfundraiser/cross-sign-grey.png) no-repeat center center/100%; }
+      .startFundraiserModal__plans .startFundraiserModal__plan .startFundraiserModal__features .btn-section .btn {
+        border-radius: 2.5rem; }
+
+.createdFundraiserModal.fade .modal-dialog .modal-content {
+  border-radius: 1.5rem; }
+
+.createdFundraiserModal .modal-body {
+  padding: 0;
+  border: none; }
+
+.createdFundraiserModal__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  font-size: 1.6rem;
+  line-height: 25px;
+  padding: 0;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  background: #fff;
+  font-weight: 600;
+  color: #8cc63e;
+  box-shadow: 0 6px 8px rgba(85, 85, 85, 0.28) !important;
+  outline: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.createdFundraiserModal__top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #ffe77f;
+  padding: 3rem;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem; }
+  .createdFundraiserModal__top img {
+    width: auto;
+    margin-bottom: 1.5rem; }
+  .createdFundraiserModal__top span {
+    text-align: center;
+    max-width: 350px;
+    margin: auto;
+    font-size: 24px;
+    letter-spacing: -1px;
+    color: #090909;
+    font-weight: 500;
+    line-height: 27px; }
+
+.createdFundraiserModal__bottom {
+  padding: 3rem;
+  text-align: center; }
+  .createdFundraiserModal__bottom h3 {
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    letter-spacing: 0;
+    color: #090909;
+    font-weight: 400;
+    margin: 0 0 1.5rem; }
+    .createdFundraiserModal__bottom h3:nth-child(2) {
+      font-weight: 700; }
+    .createdFundraiserModal__bottom h3:last-child {
+      margin: 0; }
+
 .select2-container {
   box-sizing: border-box;
   display: inline-block;
@@ -4343,8 +4498,8 @@ p {
     background-image: url(../img/backgrounds/events-bg.jpg); }
   .staticBanner.aboutusPage {
     background-image: url(../img/backgrounds/aboutus-bg.jpg); }
-  .staticBanner.becaomePartnerPage {
-    background-image: url(../img/backgrounds/becaomePartner-bg.jpg); }
+  .staticBanner.startFundraiserPage {
+    background-image: url(../img/backgrounds/startFundraiser-bg.jpg); }
   .staticBanner.contactusPage {
     background-image: url(../img/backgrounds/contactus-bg.jpg);
     min-height: 67rem; }
@@ -4415,7 +4570,7 @@ p {
     z-index: 1;
     background: #8cc63e;
     outline: none; }
-    .btn.btn-primary:before {
+    .btn.btn-primary:after {
       content: '';
       position: absolute;
       top: 0;
@@ -4430,7 +4585,7 @@ p {
       transition: all 200ms ease-in-out; }
     .btn.btn-primary:hover {
       background: #689c23; }
-      .btn.btn-primary:hover:before {
+      .btn.btn-primary:hover:after {
         height: 100%; }
   .btn.btn-secondary {
     background: #009afe;
@@ -7415,20 +7570,20 @@ select.form-control.customDropdownIcon {
       max-width: 75%;
       max-height: 75%; }
 
-.becaomePartnerPage {
+.startFundraiserPage {
   display: flex;
-  align-items: center;
   justify-content: center;
+  padding-top: 6%;
   min-height: 45rem;
   text-align: center; }
-  .becaomePartnerPage h3 {
+  .startFundraiserPage h3 {
     font-size: 5rem;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     line-height: 1.5;
     color: #ffffff;
     margin: 0; }
-    .becaomePartnerPage h3 span {
+    .startFundraiserPage h3 span {
       display: inline-block;
       font-size: 7rem;
       font-family: "quikhand_regular";
@@ -7436,35 +7591,202 @@ select.form-control.customDropdownIcon {
       line-height: 1.2;
       color: #ffffff; }
     @media (max-width: 767px) {
-      .becaomePartnerPage h3 {
+      .startFundraiserPage h3 {
         font-size: 4.5rem; } }
 
-.becaomePartner {
-  background: transparent url(../img/aboutus/aboutuspage-bg.png) no-repeat right top -18px/25.1%; }
-  .becaomePartner__heading {
+.startFundraiser {
+  padding: 0;
+  position: relative;
+  transform: translateY(-40%); }
+  .startFundraiser__main {
+    background-color: #ffffff;
+    padding: 4rem 4rem 0;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.13);
     display: flex;
     justify-content: center;
+    flex-direction: column; }
+  .startFundraiser__heading {
+    background-color: transparent;
+    padding: 0;
+    box-shadow: none;
     text-align: center;
-    flex-direction: column;
     margin: 0 0 4rem; }
-    .becaomePartner__heading h3 {
+    .startFundraiser__heading h3 {
       font-size: 4.5rem;
-      font-family: "quikhand_regular";
-      font-weight: 400;
+      font-family: "Raleway", sans-serif;
+      font-weight: 300;
       line-height: 1.2;
       color: #212121;
       letter-spacing: 0.01rem;
-      margin: 0 0 2rem; }
-    .becaomePartner__heading p {
+      margin: 0; }
+      .startFundraiser__heading h3 span {
+        display: inline-block;
+        font-family: "quikhand_regular";
+        font-weight: 400;
+        line-height: 1.2;
+        color: #ffffff; }
+  .startFundraiser__form .stepProgress {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    transition: all 0.5s ease 0s; }
+    .startFundraiser__form .stepProgress__box {
+      border-radius: 3rem;
+      overflow: hidden;
+      display: flex;
+      margin-right: 1rem;
+      height: 0.8rem; }
+    .startFundraiser__form .stepProgress__bar {
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      white-space: nowrap;
+      background-color: #8cc63e;
+      -webkit-transition: width .6s ease;
+      transition: width .6s ease; }
+    .startFundraiser__form .stepProgress__text {
+      font-size: 1.6rem;
+      line-height: 24px;
+      font-weight: 400;
+      letter-spacing: -.5px;
+      margin: 0; }
+    .startFundraiser__form .stepProgress.firstStep .stepProgress__box {
+      min-width: calc(25% - 8.12rem); }
+    .startFundraiser__form .stepProgress.secondStep .stepProgress__box {
+      min-width: calc(50% - 8.12rem); }
+    .startFundraiser__form .stepProgress.thirdStep .stepProgress__box {
+      min-width: calc(75% - 8.12rem); }
+    .startFundraiser__form .stepProgress.fourthStep .stepProgress__box {
+      min-width: calc(100% - 8.12rem); }
+  .startFundraiser__form .selectOptionBox {
+    background-color: #f2f2f2;
+    padding: 2rem 0;
+    border-radius: 10px; }
+    .startFundraiser__form .selectOptionBox h2 {
+      font-weight: 600;
+      letter-spacing: 0;
+      font-size: 2rem;
+      color: #666;
+      margin: 0; }
+  .startFundraiser__form .form-group {
+    margin-bottom: 4rem; }
+    .startFundraiser__form .form-group .form-control {
+      border: none;
+      border-radius: 0;
+      padding: 0 0 1rem;
+      border-bottom: 1px solid rgba(139, 139, 139, 0.82);
       font-size: 1.6rem;
       font-family: "Raleway", sans-serif;
       font-weight: 300;
-      line-height: 1.75;
-      color: #000000;
+      line-height: 1.2;
       letter-spacing: 0.01rem;
+      color: #000000; }
+      .startFundraiser__form .form-group .form-control::-webkit-input-placeholder {
+        font-size: 1.6rem;
+        font-family: "Raleway", sans-serif;
+        font-weight: 300;
+        line-height: 1.2;
+        letter-spacing: 0.01rem;
+        color: #000000; }
+      .startFundraiser__form .form-group .form-control::-moz-placeholder {
+        font-size: 1.6rem;
+        font-family: "Raleway", sans-serif;
+        font-weight: 300;
+        line-height: 1.2;
+        letter-spacing: 0.01rem;
+        color: #000000; }
+      .startFundraiser__form .form-group .form-control:-ms-input-placeholder {
+        font-size: 1.6rem;
+        font-family: "Raleway", sans-serif;
+        font-weight: 300;
+        line-height: 1.2;
+        letter-spacing: 0.01rem;
+        color: #000000; }
+      .startFundraiser__form .form-group .form-control:-moz-placeholder {
+        font-size: 1.6rem;
+        font-family: "Raleway", sans-serif;
+        font-weight: 300;
+        line-height: 1.2;
+        letter-spacing: 0.01rem;
+        color: #000000; }
+  .startFundraiser__form .btn-primary {
+    padding: 15px 75px;
+    border-radius: 35px;
+    margin-bottom: -25px; }
+  .startFundraiser__form .uploadImagesBox .skipButton {
+    display: block;
+    font-size: 1.4rem;
+    color: #8cc63e;
+    font-weight: 300;
+    line-height: 2rem;
+    margin-bottom: .5rem;
+    text-align: right; }
+  .startFundraiser__form .uploadImagesBox .uploadImageBox {
+    border: 2px dotted #000;
+    border-radius: 1rem;
+    padding: 2rem 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .startFundraiser__form .uploadImagesBox .uploadImageBox input.form-control {
+      width: 96px;
+      height: 82px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      cursor: pointer; }
+    .startFundraiser__form .uploadImagesBox .uploadImageBox label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      cursor: pointer;
       margin: 0; }
-      .becaomePartner__heading p:not(:last-child) {
-        margin: 0 0 2rem; }
+      .startFundraiser__form .uploadImagesBox .uploadImageBox label i {
+        background: #8cc63e;
+        color: #fff;
+        -webkit-box-shadow: 0 2px 5px rgba(33, 147, 106, 0.5);
+        -moz-box-shadow: 0 2px 5px rgba(33, 147, 106, 0.5);
+        box-shadow: 0 2px 5px rgba(33, 147, 106, 0.5);
+        width: 50px;
+        height: 50px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        cursor: pointer;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff !important;
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem; }
+      .startFundraiser__form .uploadImagesBox .uploadImageBox label h4 {
+        margin: 0; }
+  .startFundraiser__form .uploadImagesBox h6 {
+    color: #212121;
+    padding-bottom: .5rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -.5px;
+    text-align: center; }
+    .startFundraiser__form .uploadImagesBox h6 span {
+      cursor: pointer;
+      text-decoration: underline;
+      color: #8cc63e; }
 
 .contactusPage {
   display: flex;

@@ -13,7 +13,8 @@
 <meta name="description" content="">
 
 <!--// Stylesheet //-->
-<link type="text/css" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.0-beta/css/bootstrap-select.min.css">
 <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.css">
 <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 
@@ -28,10 +29,11 @@
         </div>
         <div class="header__links">
             <ul>
+                <li><a href="startfundraiser.html">Start a free Fundraiser</a></li>
                 <li><a href="about-us.html">Who we are</a></li>
-                <li><a href="events.html">events</a></li>
-                <li><a href="#!">Causes</a></li>
-                <li><a href="contact-us.html">Contact</a></li>
+                <li><a href="#!">Browse Fundraisers</a></li>
+                <!-- <li><a href="events.html">events</a></li> -->
+                <!-- <li><a href="contact-us.html">Contact</a></li> -->
                 <li class="donate-btn"><a href="#!" data-toggle="modal" data-target="#donateModal">Donate Now</a></li>
             </ul>
         </div>
@@ -263,12 +265,132 @@
     </div>
 </div>
 
+<div class="startFundraiserModal modal fade" id="startFundraiserModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h1>For faster fundraising, upgrade your plan</h1>
+                <div class="startFundraiserModal__plans">
+                    <div class="startFundraiserModal__plan">
+                        <div class="startFundraiserModal__name">
+                            <h2>Collaborate</h2>
+                            <hr class="plan-divider">
+                            <img class="recommended-tag" src="img/startfundraiser/reccomded.png">
+                        </div>
+                        <div class="startFundraiserModal__fees">
+                            <h3>8%</h3>
+                            <span>Platform Fee<sup><strong>*</strong></sup></span>
+                        </div>
+                        <hr>
+                        <div class="startFundraiserModal__features">
+                            <ul>
+                                <li class="valid">Automated fundraiser story support</li>
+                                <li class="valid">Multiple donation methods</li>
+                                <li class="valid">Personalised fundraising dashboard</li>
+                                <li class="valid">Email/Chat support</li>
+                                <li class="valid">Real-time donation tracking using iOS / Android App</li>
+                                <li class="valid">Faster fundraiser approval / withdrawals</li>
+                                <li class="valid">Eligible for matching donations*</li>
+                                <li class="valid">Relationship manager</li>
+                                <li class="valid">80G tax benefits</li>
+                                <li class="valid">Video fundraising appeal</li>
+                                <li class="valid">Enhanced visibility &amp; Customized Outreach</li>
+                            </ul>
+                            <div class="btn-section text-center">
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createdFundraiserModal" data-dismiss="modal">Select &amp; Continue</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="startFundraiserModal__plan">
+                        <div class="startFundraiserModal__name">
+                            <h2>Assisted</h2>
+                            <hr class="plan-divider">
+                        </div>
+                        <div class="startFundraiserModal__fees">
+                            <h3>5%</h3>
+                            <span>Platform Fee<sup><strong>*</strong></sup></span>
+                        </div>
+                        <hr>
+                        <div class="startFundraiserModal__features">
+                            <ul>
+                                <li class="valid">Automated fundraiser story support</li>
+                                <li class="valid">Multiple donation methods</li>
+                                <li class="valid">Personalised fundraising dashboard</li>
+                                <li class="valid">Email/Chat support</li>
+                                <li class="valid">Real-time donation tracking using iOS / Android App</li>
+                                <li class="valid">Faster fundraiser approval / withdrawals</li>
+                                <li class="valid">Eligible for matching donations*</li>
+                                <li class="valid">Relationship manager</li>
+                                <li class="notvalid">80G tax benefits</li>
+                                <li class="notvalid">Video fundraising appeal</li>
+                                <li class="notvalid">Enhanced visibility &amp; Customized Outreach</li>
+                            </ul>
+                            <div class="btn-section text-center">
+                                <button type="button" class="btn btn-border-primary" data-toggle="modal" data-target="#createdFundraiserModal" data-dismiss="modal">Switch Plan</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="startFundraiserModal__plan">
+                        <div class="startFundraiserModal__name">
+                            <h2>Self-Driven</h2>
+                            <hr class="plan-divider">
+                        </div>
+                        <div class="startFundraiserModal__fees">
+                            <h3>0%</h3>
+                            <span>Platform Fee<sup><strong>*</strong></sup></span>
+                        </div>
+                        <hr>
+                        <div class="startFundraiserModal__features">
+                            <ul>
+                                <li class="valid">Automated fundraiser story support</li>
+                                <li class="valid">Multiple donation methods</li>
+                                <li class="valid">Personalised fundraising dashboard</li>
+                                <li class="valid">Email/Chat support</li>
+                                <li class="valid">Real-time donation tracking using iOS / Android App</li>
+                                <li class="notvalid">Faster fundraiser approval / withdrawals</li>
+                                <li class="notvalid">Eligible for matching donations*</li>
+                                <li class="notvalid">Relationship manager</li>
+                                <li class="notvalid">80G tax benefits</li>
+                                <li class="notvalid">Video fundraising appeal</li>
+                                <li class="notvalid">Enhanced visibility &amp; Customized Outreach</li>
+                            </ul>
+                            <div class="btn-section text-center">
+                                <button type="button" class="btn btn-border-primary" data-toggle="modal" data-target="#createdFundraiserModal" data-dismiss="modal">Switch Plan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="createdFundraiserModal modal fade" id="createdFundraiserModal">
+    <div class="modal-dialog md">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="createdFundraiserModal__close" data-dismiss="modal" aria-label="Close">X</button>
+				<div class="createdFundraiserModal__top">
+                    <img src="img/startfundraiser/green-circle-big.png">
+                    <span>0% Platform charges have been applied to your fundraiser</span>
+				</div>
+				<div class="createdFundraiserModal__bottom">
+                    <h3>To change your plan get in touch with your relationship manager.</h3>
+                    <h3>Contact Details:</h3>
+                    <h3><a target="_blank" href="mailto:info@impactguru.com">info@impactguru.com</a> or call- 1800 1020 380</h3>
+				</div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Javascripts -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.0-beta/js/bootstrap-select.min.js"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
 <script src="js/mCustomScrollbar.js"></script>
 <script src="js/slick.js"></script>
 <script src="js/functions.js"></script>

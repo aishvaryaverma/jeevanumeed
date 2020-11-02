@@ -58,7 +58,7 @@
 		background: $primary_color;
 		outline: none;
 
-		&:before {
+		&:after {
 			content: '';
 			position: absolute;
 			top: 0;
@@ -78,7 +78,7 @@
 			// box-shadow: 0 0 0 0.2rem rgba(36, 58, 126, 0.55);
 			background: $primary_hover;
 
-			&:before {
+			&:after {
 				height: 100%;
 			}
 		}
