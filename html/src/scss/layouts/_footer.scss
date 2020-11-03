@@ -2,18 +2,7 @@
     position: relative;
     z-index: 1;
     padding: 8rem 0;
-    margin-top: 2.1rem;
-    background-color: #f2f3f3;
-
-    &:after {
-        content: "";
-        position: absolute;
-        bottom: 100%;
-        left: 0;
-        width: 100%;
-        height: 2.1rem;
-        background: transparent url(../img/mainfooter/mainFooter-top.png) no-repeat center bottom / 100%;
-    }
+    background-color: #dbdfdf;
     
     &__content {
         display: flex;
@@ -259,3 +248,21 @@
         width: 50%;
     }
 }
+
+// .homePage {
+
+//     .mainFooter {
+//         margin-top: 2.1rem;
+//         background-color: #f2f3f3;
+
+//         &:after {
+//             content: "";
+//             position: absolute;
+//             bottom: 100%;
+//             left: 0;
+//             width: 100%;
+//             height: 2.1rem;
+//             background: transparent url(../img/mainfooter/mainFooter-top.png) no-repeat center bottom / 100%;
+//         }
+//     }
+// }

@@ -8,8 +8,9 @@ const pages = [
 	path + "index.html",
 	path + "events.html",
 	path + "about-us.html",
-	path + "startfundraiser.html",
-	path + "contact-us.html"
+	path + "start-fundraiser.html",
+	path + "contact-us.html",
+	path + "browse-fundraisers.html"
 ];
 
 // FOR HTML PAGES

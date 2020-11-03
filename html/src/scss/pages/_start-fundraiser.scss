@@ -39,7 +39,7 @@
     &__main {
         background-color: $white_color;
         padding: 4rem 4rem 0;
-        box-shadow: 0 0 10px 2px rgba($black_color, 0.13);
+        box-shadow: 0 0 1rem .2rem rgba($black_color, 0.13);
 
         display: flex;
         justify-content: center;
@@ -109,9 +109,9 @@
 
             &__text {
                 font-size: 1.6rem;
-                line-height: 24px;
+                line-height: 1.5;
                 font-weight: 400;
-                letter-spacing: -.5px;
+                letter-spacing: -.05rem;
                 margin: 0;
             }
 
@@ -147,7 +147,7 @@
         .selectOptionBox {
             background-color: #f2f2f2;
             padding: 2rem 0;
-            border-radius: 10px;
+            border-radius: 1rem;
 
             h2 {
                 font-weight: 600;
@@ -165,7 +165,7 @@
                 border: none;
                 border-radius: 0;
                 padding: 0 0 1rem;
-                border-bottom: 1px solid rgba(#8b8b8b, 0.82);
+                border-bottom: .1rem solid rgba(#8b8b8b, 0.82);
 
                 font-size: 1.6rem;
                 font-family: $secondary_font;
@@ -213,9 +213,9 @@
         }
 
         .btn-primary {
-            padding: 15px 75px;
-            border-radius: 35px;
-            margin-bottom: -25px;
+            padding: 1.5rem 7.5rem;
+            border-radius: 3.5rem;
+            margin-bottom: -2.5rem;
         }
 
         .uploadImagesBox {
@@ -231,7 +231,7 @@
             }
 
             .uploadImageBox {
-                border: 2px dotted #000;
+                border: .2rem dotted #000;
                 border-radius: 1rem;
                 padding: 2rem 0;
                 position: relative;
@@ -241,8 +241,8 @@
                 justify-content: center;
 
                 input.form-control {
-                    width: 96px;
-                    height: 82px;
+                    width: 9.6rem;
+                    height: 8.2rem;
                     position: absolute;
                     top: 50%;
                     left: 50%;
@@ -263,12 +263,12 @@
                     i {
                         background: $primary_color;
                         color: #fff;
-                        -webkit-box-shadow: 0 2px 5px rgba(33, 147, 106, .5);
-                        -moz-box-shadow: 0 2px 5px rgba(33, 147, 106, .5);
-                        box-shadow: 0 2px 5px rgba(33, 147, 106, .5);
+                        -webkit-box-shadow: 0 .2rem .5rem rgba(33, 147, 106, .5);
+                        -moz-box-shadow: 0 .2rem .5rem rgba(33, 147, 106, .5);
+                        box-shadow: 0 .2rem .5rem rgba(33, 147, 106, .5);
 
-                        width: 50px;
-                        height: 50px;
+                        width: 5rem;
+                        height: 5rem;
                         -webkit-border-radius: 50%;
                         -moz-border-radius: 50%;
                         border-radius: 50%;
@@ -296,7 +296,7 @@
                 font-size: 1.6rem;
                 font-weight: 400;
                 line-height: 1.5;
-                letter-spacing: -.5px;
+                letter-spacing: -.05rem;
                 text-align: center;
 
                 span {
