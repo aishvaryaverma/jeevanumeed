@@ -191,6 +191,22 @@ var dispatch = {
 		});
 
 		// $('.selectpicker').selectpicker();
+
+		$(".donateAmount").click(function () {
+			$(".donateModal__box:nth-child(2)").addClass("donateModal__box--fullWidth");
+		});
+
+		$("#supriseUsBtn").click(function () {
+			$(".donateModal__box:nth-child(2)").toggleClass("donateModal__box--fullWidth");
+		});
+
+		$(".donateAmount").click(function () {
+			$(".donateModal__box:nth-child(3)").removeClass("donateModal__box--show").addClass("donateModal__box--hide");
+		});
+
+		$("#supriseUsBtn").click(function () {
+			$(".donateModal__box:nth-child(3)").toggleClass("donateModal__box--hide donateModal__box--show");
+		});
 	},
 
 	homePage: function () {

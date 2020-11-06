@@ -227,7 +227,7 @@
                         <div class="topFundraiser__slider" id="topFundraiserSlider">
                             <div class="topFundraiserItem">
                                 <div class="topFundraiserItem__img">
-                                    <img src="img/topFundraiser/topFundraiser-img1.jpg" alt="">
+                                    <a href="fundraiser-details.html"><img src="img/topFundraiser/topFundraiser-img1.jpg" alt=""></a>
                                 </div>
                                 <div class="topFundraiserItem__content">
                                     <h3 class="heading">Health Care</h3>
@@ -251,7 +251,7 @@
                             </div>
                             <div class="topFundraiserItem">
                                 <div class="topFundraiserItem__img">
-                                    <img src="img/topFundraiser/topFundraiser-img2.jpg" alt="">
+                                    <a href="fundraiser-details.html"><img src="img/topFundraiser/topFundraiser-img2.jpg" alt=""></a>
                                 </div>
                                 <div class="topFundraiserItem__content">
                                     <h3 class="heading">Health Care</h3>
@@ -275,7 +275,7 @@
                             </div>
                             <div class="topFundraiserItem">
                                 <div class="topFundraiserItem__img">
-                                    <img src="img/topFundraiser/topFundraiser-img3.jpg" alt="">
+                                    <a href="fundraiser-details.html"><img src="img/topFundraiser/topFundraiser-img3.jpg" alt=""></a>
                                 </div>
                                 <div class="topFundraiserItem__content">
                                     <h3 class="heading">Health Care</h3>
@@ -299,7 +299,7 @@
                             </div>
                             <div class="topFundraiserItem">
                                 <div class="topFundraiserItem__img">
-                                    <img src="img/topFundraiser/topFundraiser-img4.jpg" alt="">
+                                    <a href="fundraiser-details.html"><img src="img/topFundraiser/topFundraiser-img4.jpg" alt=""></a>
                                 </div>
                                 <div class="topFundraiserItem__content">
                                     <h3 class="heading">Health Care</h3>
@@ -323,7 +323,7 @@
                             </div>
                             <div class="topFundraiserItem">
                                 <div class="topFundraiserItem__img">
-                                    <img src="img/topFundraiser/topFundraiser-img1.jpg" alt="">
+                                    <a href="fundraiser-details.html"><img src="img/topFundraiser/topFundraiser-img1.jpg" alt=""></a>
                                 </div>
                                 <div class="topFundraiserItem__content">
                                     <h3 class="heading">Health Care</h3>
@@ -461,46 +461,72 @@
 <div class="backtoTop" id="backtoTop"><img src="img/back_arrow.png"></div>
 
 <div class="donateModal modal fade" id="donateModal">
-    <div class="modal-dialog md">
+    <div class="modal-dialog lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Choose Amount</h5>
                 <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close">X</button>
+                <h5 class="modal-title">Each Time You Donate, You’re Helping Someone</h5>
             </div>
             <div class="modal-body">
-                <form>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <ul class="donateAmounts">
-                                <li><a href="#!" class="donateAmount">Rs. 500</a></li>
-                                <li><a href="#!" class="donateAmount selected">Rs. 1000</a></li>
-                                <li><a href="#!" class="donateAmount">Rs. 5000</a></li>
-                                <li><input type="number" class="form-control typeDonateAmount" placeholder="Add Amount"></li>
-                            </ul>
+                <form class="donateModal__form">
+                    <div class="donateModal__box donateModal__box--fullWidth">
+                        <ul class="donateAmounts">
+                            <li><a href="#!" class="donateAmount">Rs. 500</a></li>
+                            <li><a href="#!" class="donateAmount">Rs. 1000</a></li>
+                            <li><a href="#!" class="donateAmount">Rs. 5000</a></li>
+                            <li><a href="#!" class="donateAmount selected" id="supriseUsBtn">Suprise Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="donateModal__box donateModal__box--fullWidth">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Full Name">
                         </div>
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Name">
-                            </div>
+                    </div>
+                    <div class="donateModal__box donateModal__box--hide">
+                        <div class="form-group">
+                            <input type="number" class="form-control" placeholder="Donation Amount">
                         </div>
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Email">
-                            </div>
+                    </div>
+                    <div class="donateModal__box">
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email ID">
                         </div>
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <input type="tel" class="form-control" placeholder="Phone">
-                            </div>
+                    </div>
+                    <div class="donateModal__box">
+                        <div class="form-group">
+                            <input type="tel" class="form-control" placeholder="Phone Number">
                         </div>
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Address">
-                            </div>
+                    </div>
+                    <div class="donateModal__box">
+                        <div class="form-group">
+                            <label class="checkbox">
+                                <input class="checkbox__input" type="checkbox">
+                                <span class="checkbox__slider"></span>
+                                <span class="checkbox__text">
+                                    <span class="title">Donate Anonymously</span>
+                                    <span class="subtitle">Your Donation will be marked Anonymous</span>
+                                </span>
+                            </label>
                         </div>
-                        <div class="col-lg-12 text-center">
-                            <button type="submit" class="btn btn-primary">Proceed to Pay</button>
+                    </div>
+                    <div class="donateModal__box">
+                        <div class="form-group">
+                            <label class="checkbox">
+                                <input class="checkbox__input" type="checkbox" id="myCheckbox" onclick="myFunction()">
+                                <span class="checkbox__slider"></span>
+                                <span class="checkbox__text">
+                                    <span class="title">I Would you like to leave a heartly note for them</span>
+                                </span>
+                            </label>
                         </div>
+                    </div>
+                    <div class="donateModal__box donateModal__box--fullWidth">
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Your Note.." id="yourNote"></textarea>
+                        </div>
+                    </div>
+                    <div class="donateModal__box donateModal__box--fullWidth donateModal__box--right">
+                        <button type="submit" class="btn btn-primary">Proceed to Pay</button>
                     </div>
                 </form>
             </div>
@@ -645,6 +671,18 @@
         </div>
     </div>
 </div>
+
+<script>
+    function myFunction() {
+        var checkBox = document.getElementById("myCheckbox");
+        var text = document.getElementById("yourNote");
+        if (checkBox.checked == true) {
+            text.style.display = "block";
+        } else {
+            text.style.display = "none";
+        }
+    }
+</script>
 
 <!-- Javascripts -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>

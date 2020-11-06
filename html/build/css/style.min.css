@@ -2353,83 +2353,159 @@ img {
 .donateModal .modal-body {
   padding: 3rem 4rem;
   border: none; }
-  .donateModal .modal-body form .donateAmounts {
+  .donateModal .modal-body .donateModal__form {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 3rem; }
-    .donateModal .modal-body form .donateAmounts li {
-      display: block;
-      width: 22.5%; }
-      .donateModal .modal-body form .donateAmounts li .donateAmount {
+    flex-grow: 1; }
+    .donateModal .modal-body .donateModal__form .donateModal__box {
+      width: calc(50% - 20px); }
+      .donateModal .modal-body .donateModal__form .donateModal__box--fullWidth {
+        width: 100%; }
+      .donateModal .modal-body .donateModal__form .donateModal__box--right {
+        display: flex;
+        justify-content: flex-end; }
+      .donateModal .modal-body .donateModal__form .donateModal__box--hide {
+        display: none !important; }
+      .donateModal .modal-body .donateModal__form .donateModal__box--show {
+        display: block !important; }
+    .donateModal .modal-body .donateModal__form .donateAmounts {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 3rem; }
+      .donateModal .modal-body .donateModal__form .donateAmounts li {
         display: block;
-        font-size: 1.8rem;
-        font-family: "Raleway", sans-serif;
-        font-weight: 400;
-        line-height: 1.2;
-        letter-spacing: 0.01rem;
-        color: #000000;
-        padding: .75rem;
-        border-radius: 4px;
-        border: 2px solid #d9d9d9;
-        text-align: center; }
-        .donateModal .modal-body form .donateAmounts li .donateAmount.selected {
-          border: 2px solid #009afe;
-          background-color: #009afe;
-          color: #ffffff; }
-      .donateModal .modal-body form .donateAmounts li .typeDonateAmount {
-        width: 100%;
-        height: auto;
-        padding: 0 .75rem;
-        border: 2px solid #d9d9d9;
-        font-size: 1.6rem;
-        font-family: "Raleway", sans-serif;
-        font-weight: 300;
-        line-height: 36px;
-        letter-spacing: 0.01rem;
-        color: #000000;
-        border-radius: 4px; }
-  .donateModal .modal-body form .form-group {
-    margin-bottom: 3rem; }
-    .donateModal .modal-body form .form-group .form-control {
-      border: none;
-      border-radius: 0;
-      padding: 0 0 1rem;
-      border-bottom: 1px solid rgba(139, 139, 139, 0.82);
-      font-size: 1.6rem;
-      font-family: "Raleway", sans-serif;
-      font-weight: 300;
-      line-height: 1.2;
-      letter-spacing: 0.01rem;
-      color: #000000; }
-      .donateModal .modal-body form .form-group .form-control::-webkit-input-placeholder {
+        width: 22.5%; }
+        .donateModal .modal-body .donateModal__form .donateAmounts li .donateAmount {
+          display: block;
+          font-size: 1.8rem;
+          font-family: "Raleway", sans-serif;
+          font-weight: 400;
+          line-height: 1.2;
+          letter-spacing: 0.01rem;
+          color: #000000;
+          padding: 1.25rem;
+          border-radius: 4px;
+          border: 2px solid #d9d9d9;
+          text-align: center; }
+          .donateModal .modal-body .donateModal__form .donateAmounts li .donateAmount:hover, .donateModal .modal-body .donateModal__form .donateAmounts li .donateAmount.selected {
+            border: 2px solid #009afe;
+            background-color: #009afe;
+            color: #ffffff; }
+        .donateModal .modal-body .donateModal__form .donateAmounts li .typeDonateAmount {
+          width: 100%;
+          height: auto;
+          padding: 0 .75rem;
+          border: 2px solid #d9d9d9;
+          font-size: 1.6rem;
+          font-family: "Raleway", sans-serif;
+          font-weight: 300;
+          line-height: 36px;
+          letter-spacing: 0.01rem;
+          color: #000000;
+          border-radius: 4px; }
+    .donateModal .modal-body .donateModal__form .form-group {
+      margin-bottom: 3rem; }
+      .donateModal .modal-body .donateModal__form .form-group .form-control {
+        border: none;
+        border-radius: 0;
+        padding: 0 0 1rem;
+        border-bottom: 1px solid rgba(139, 139, 139, 0.82);
         font-size: 1.6rem;
         font-family: "Raleway", sans-serif;
         font-weight: 300;
         line-height: 1.2;
         letter-spacing: 0.01rem;
         color: #000000; }
-      .donateModal .modal-body form .form-group .form-control::-moz-placeholder {
-        font-size: 1.6rem;
-        font-family: "Raleway", sans-serif;
-        font-weight: 300;
-        line-height: 1.2;
-        letter-spacing: 0.01rem;
-        color: #000000; }
-      .donateModal .modal-body form .form-group .form-control:-ms-input-placeholder {
-        font-size: 1.6rem;
-        font-family: "Raleway", sans-serif;
-        font-weight: 300;
-        line-height: 1.2;
-        letter-spacing: 0.01rem;
-        color: #000000; }
-      .donateModal .modal-body form .form-group .form-control:-moz-placeholder {
-        font-size: 1.6rem;
-        font-family: "Raleway", sans-serif;
-        font-weight: 300;
-        line-height: 1.2;
-        letter-spacing: 0.01rem;
-        color: #000000; }
+        .donateModal .modal-body .donateModal__form .form-group .form-control::-webkit-input-placeholder {
+          font-size: 1.6rem;
+          font-family: "Raleway", sans-serif;
+          font-weight: 300;
+          line-height: 1.2;
+          letter-spacing: 0.01rem;
+          color: #000000; }
+        .donateModal .modal-body .donateModal__form .form-group .form-control::-moz-placeholder {
+          font-size: 1.6rem;
+          font-family: "Raleway", sans-serif;
+          font-weight: 300;
+          line-height: 1.2;
+          letter-spacing: 0.01rem;
+          color: #000000; }
+        .donateModal .modal-body .donateModal__form .form-group .form-control:-ms-input-placeholder {
+          font-size: 1.6rem;
+          font-family: "Raleway", sans-serif;
+          font-weight: 300;
+          line-height: 1.2;
+          letter-spacing: 0.01rem;
+          color: #000000; }
+        .donateModal .modal-body .donateModal__form .form-group .form-control:-moz-placeholder {
+          font-size: 1.6rem;
+          font-family: "Raleway", sans-serif;
+          font-weight: 300;
+          line-height: 1.2;
+          letter-spacing: 0.01rem;
+          color: #000000; }
+        .donateModal .modal-body .donateModal__form .form-group .form-control#yourNote {
+          display: none;
+          height: 100px;
+          resize: none; }
+      .donateModal .modal-body .donateModal__form .form-group .checkbox {
+        position: relative;
+        display: flex;
+        padding-left: 40px; }
+        .donateModal .modal-body .donateModal__form .form-group .checkbox__input {
+          opacity: 0;
+          width: 0;
+          height: 0; }
+          .donateModal .modal-body .donateModal__form .form-group .checkbox__input:checked + .checkbox__slider {
+            background-color: #009afe; }
+          .donateModal .modal-body .donateModal__form .form-group .checkbox__input:focus + .checkbox__slider {
+            box-shadow: 0 0 1px #009afe; }
+          .donateModal .modal-body .donateModal__form .form-group .checkbox__input:checked + .checkbox__slider:before {
+            transform: translateX(13px); }
+        .donateModal .modal-body .donateModal__form .form-group .checkbox__slider {
+          width: 30px;
+          height: 17px;
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #ccc;
+          border-radius: 17px;
+          transition: .4s; }
+          .donateModal .modal-body .donateModal__form .form-group .checkbox__slider:before {
+            position: absolute;
+            content: "";
+            height: 13px;
+            width: 13px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            border-radius: 50%;
+            transition: .4s; }
+        .donateModal .modal-body .donateModal__form .form-group .checkbox__text {
+          display: flex;
+          flex-direction: column; }
+          .donateModal .modal-body .donateModal__form .form-group .checkbox__text .title {
+            display: block;
+            font-family: "Raleway", sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 1.5;
+            color: rgba(9, 23, 42, 0.5);
+            margin-bottom: 5px;
+            margin-top: -2.5px; }
+          .donateModal .modal-body .donateModal__form .form-group .checkbox__text .subtitle {
+            display: block;
+            font-family: "Raleway", sans-serif;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 1.5;
+            color: rgba(9, 23, 42, 0.4);
+            margin-bottom: 5px; }
 
 .eventsModal .modal-body {
   position: relative;
@@ -6976,8 +7052,10 @@ select.form-control.customDropdownIcon {
       justify-content: center;
       flex-direction: column;
       text-align: center; }
-      .topFundraiser__slider .topFundraiserItem__img img {
-        width: 100%; }
+      .topFundraiser__slider .topFundraiserItem__img a {
+        display: block; }
+        .topFundraiser__slider .topFundraiserItem__img a img {
+          width: 100%; }
       .topFundraiser__slider .topFundraiserItem__content {
         background-color: #ffffff;
         padding: 3rem 2rem; }
@@ -7951,9 +8029,9 @@ select.form-control.customDropdownIcon {
 .browseFundraisers__sidebar {
   background: #fff;
   width: 96%;
-  padding: 10px 1px;
-  border-radius: 10px;
-  box-shadow: 1px 1px 16px 2px #ebebeb;
+  padding: 1rem .1rem;
+  border-radius: 1rem;
+  box-shadow: .1rem .1rem 1.6rem .2rem #ebebeb;
   z-index: 1; }
   .browseFundraisers__sidebar .sidebarMenu {
     width: 100%;
@@ -7964,25 +8042,25 @@ select.form-control.customDropdownIcon {
       display: block;
       cursor: pointer; }
       .browseFundraisers__sidebar .sidebarMenu li:not(:last-child) {
-        box-shadow: 0 2px 0 0 #f2f2f2; }
+        box-shadow: 0 .2rem 0 0 #f2f2f2; }
       .browseFundraisers__sidebar .sidebarMenu li a {
         display: flex;
-        padding: 10px; }
+        padding: 1rem; }
         .browseFundraisers__sidebar .sidebarMenu li a .sidebarMenu__icon {
           display: block;
-          width: 37px;
-          height: 34px;
+          width: 3.7rem;
+          height: 3.4rem;
           background-image: url(../img/browsefundraisers/sprites_global.png); }
           .browseFundraisers__sidebar .sidebarMenu li a .sidebarMenu__icon.medical {
-            background-position: -36px -49px; }
+            background-position: -3.6rem -4.9rem; }
           .browseFundraisers__sidebar .sidebarMenu li a .sidebarMenu__icon.ngo {
-            background-position: -70px -134px; }
+            background-position: -7rem -13.4rem; }
           .browseFundraisers__sidebar .sidebarMenu li a .sidebarMenu__icon.personalCause {
-            background-position: -104px -133px; }
+            background-position: -10.4rem -13.3rem; }
           .browseFundraisers__sidebar .sidebarMenu li a .sidebarMenu__icon.creativeIdeas {
-            background-position: -176px -220px; }
+            background-position: -17.6rem -22rem; }
           .browseFundraisers__sidebar .sidebarMenu li a .sidebarMenu__icon.acidAttacks {
-            background-position: -135px -133px; }
+            background-position: -13.5rem -13.3rem; }
         .browseFundraisers__sidebar .sidebarMenu li a .sidebarMenu__text {
           font-size: 1.6rem;
           font-weight: 400;
@@ -7995,15 +8073,15 @@ select.form-control.customDropdownIcon {
         .browseFundraisers__sidebar .sidebarMenu li:hover a .sidebarMenu__icon, .browseFundraisers__sidebar .sidebarMenu li.active a .sidebarMenu__icon {
           background: url(../img/browsefundraisers/sprites_global_hover.png) 0 0; }
           .browseFundraisers__sidebar .sidebarMenu li:hover a .sidebarMenu__icon.medical, .browseFundraisers__sidebar .sidebarMenu li.active a .sidebarMenu__icon.medical {
-            background-position: -36px -49px; }
+            background-position: -3.6rem -4.9rem; }
           .browseFundraisers__sidebar .sidebarMenu li:hover a .sidebarMenu__icon.ngo, .browseFundraisers__sidebar .sidebarMenu li.active a .sidebarMenu__icon.ngo {
-            background-position: -70px -134px; }
+            background-position: -7rem -13.4rem; }
           .browseFundraisers__sidebar .sidebarMenu li:hover a .sidebarMenu__icon.personalCause, .browseFundraisers__sidebar .sidebarMenu li.active a .sidebarMenu__icon.personalCause {
-            background-position: -104px -133px; }
+            background-position: -10.4rem -13.3rem; }
           .browseFundraisers__sidebar .sidebarMenu li:hover a .sidebarMenu__icon.creativeIdeas, .browseFundraisers__sidebar .sidebarMenu li.active a .sidebarMenu__icon.creativeIdeas {
-            background-position: -176px -220px; }
+            background-position: -17.6rem -22rem; }
           .browseFundraisers__sidebar .sidebarMenu li:hover a .sidebarMenu__icon.acidAttacks, .browseFundraisers__sidebar .sidebarMenu li.active a .sidebarMenu__icon.acidAttacks {
-            background-position: -135px -133px; }
+            background-position: -13.5rem -13.3rem; }
         .browseFundraisers__sidebar .sidebarMenu li:hover a .sidebarMenu__text, .browseFundraisers__sidebar .sidebarMenu li.active a .sidebarMenu__text {
           color: #21936a; }
 
@@ -8027,17 +8105,17 @@ select.form-control.customDropdownIcon {
       margin-top: 2.1rem; }
     .browseFundraisers__fundraisers .browseFundraisersBox__badgeBoxes {
       position: absolute;
-      top: 10px;
+      top: 1rem;
       left: 0;
       z-index: 1;
-      width: calc(100% - 1px);
+      width: calc(100% - .1rem);
       display: flex;
       align-items: center;
       justify-content: space-between; }
       .browseFundraisers__fundraisers .browseFundraisersBox__badgeBoxes .badge {
         font-size: 1rem;
         font-weight: 400;
-        line-height: 24px;
+        line-height: 2.4rem;
         display: block;
         padding: 0;
         border-radius: 0;
@@ -8050,28 +8128,30 @@ select.form-control.customDropdownIcon {
           display: block;
           position: absolute;
           top: 0;
-          border: 12px solid transparent;
+          border: 1.2rem solid transparent;
           z-index: 9999; }
         .browseFundraisers__fundraisers .browseFundraisersBox__badgeBoxes .badge.primary-badge {
           color: #fff;
           background-color: #8cc63e;
-          padding-left: 10px; }
+          padding-left: 1rem; }
           .browseFundraisers__fundraisers .browseFundraisersBox__badgeBoxes .badge.primary-badge:after {
             left: 100%;
-            border-top: 12px solid #8cc63e;
-            border-bottom: 12px solid #8cc63e;
-            border-left: 12px solid #8cc63e; }
+            border-top: 1.2rem solid #8cc63e;
+            border-bottom: 1.2rem solid #8cc63e;
+            border-left: 1.2rem solid #8cc63e; }
         .browseFundraisers__fundraisers .browseFundraisersBox__badgeBoxes .badge.secondary-badge {
           color: #fff;
           background-color: #009afe;
-          padding-right: 10px; }
+          padding-right: 1rem; }
           .browseFundraisers__fundraisers .browseFundraisersBox__badgeBoxes .badge.secondary-badge:after {
             right: 100%;
-            border-top: 12px solid #009afe;
-            border-bottom: 12px solid #009afe;
-            border-right: 12px solid #009afe; }
-    .browseFundraisers__fundraisers .browseFundraisersBox__img img {
-      width: 100%; }
+            border-top: 1.2rem solid #009afe;
+            border-bottom: 1.2rem solid #009afe;
+            border-right: 1.2rem solid #009afe; }
+    .browseFundraisers__fundraisers .browseFundraisersBox__img a {
+      display: block; }
+      .browseFundraisers__fundraisers .browseFundraisersBox__img a img {
+        width: 100%; }
     .browseFundraisers__fundraisers .browseFundraisersBox__content {
       background-color: #ffffff;
       padding: 3rem 2rem; }
@@ -8164,5 +8244,250 @@ select.form-control.customDropdownIcon {
             height: 2.5rem; }
             .browseFundraisers__fundraisers .browseFundraisersBox__content .socialIcons li a img {
               width: 100%; }
+
+.fundraiserDetailsPage {
+  display: flex;
+  flex-direction: column;
+  padding-top: 8%;
+  min-height: 45rem;
+  text-align: center;
+  position: relative; }
+  .fundraiserDetailsPage h3 {
+    font-size: 5rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #ffffff;
+    margin: 0 0 4rem; }
+    .fundraiserDetailsPage h3 span {
+      display: inline-block;
+      font-size: 7rem;
+      font-family: "quikhand_regular";
+      font-weight: 400;
+      line-height: 1.2;
+      color: #ffffff; }
+    @media (max-width: 767px) {
+      .fundraiserDetailsPage h3 {
+        font-size: 4.5rem; } }
+  .fundraiserDetailsPage .fundraiserDetails {
+    background: rgba(225, 225, 225, 0.1);
+    width: 90%;
+    border-radius: 1rem;
+    padding: 2rem 0;
+    margin: 0 auto; }
+    .fundraiserDetailsPage .fundraiserDetails ul {
+      display: flex;
+      justify-content: center;
+      margin: 0; }
+      .fundraiserDetailsPage .fundraiserDetails ul li {
+        list-style: none;
+        display: inline-block;
+        padding: .5rem 1rem;
+        max-width: 18.5rem; }
+        .fundraiserDetailsPage .fundraiserDetails ul li h2 {
+          color: #fff;
+          font-size: 3.6rem;
+          font-family: "Raleway", sans-serif;
+          line-height: 1.2;
+          letter-spacing: -.05rem;
+          font-weight: 400;
+          margin-bottom: .5rem; }
+        .fundraiserDetailsPage .fundraiserDetails ul li span {
+          display: inline-block;
+          font-size: 1.6rem;
+          font-family: "Raleway", sans-serif;
+          font-weight: 400;
+          line-height: 1.5;
+          color: #fff; }
+
+.fundraiserDetails__main {
+  display: flex;
+  flex-direction: column; }
+  .fundraiserDetails__main .fundraiserDetails__heading {
+    text-align: center;
+    margin: 4rem 0; }
+    .fundraiserDetails__main .fundraiserDetails__heading h2 {
+      font-size: 3rem;
+      line-height: 3.6rem;
+      color: #000;
+      letter-spacing: -.05rem;
+      font-weight: 400;
+      text-transform: capitalize;
+      margin: 0; }
+  .fundraiserDetails__main .fundraiserDetails__content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details {
+      width: calc(65% - 15px); }
+      .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox {
+        width: 100%;
+        display: flex;
+        flex-direction: column; }
+        .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__img {
+          border-radius: .75rem;
+          overflow: hidden;
+          position: relative;
+          width: 100%;
+          padding: .75rem;
+          background-color: #ffffff;
+          box-shadow: 1px 1px 16px 2px #ebebeb;
+          margin-bottom: 4rem; }
+          .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__img img {
+            width: 100%;
+            border-radius: .75rem; }
+        .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__badgeBoxes {
+          position: absolute;
+          top: 2rem;
+          left: 0;
+          z-index: 1;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between; }
+          .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__badgeBoxes .badge {
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 2.4rem;
+            display: block;
+            padding: 0;
+            border-radius: 0;
+            position: relative;
+            text-transform: uppercase; }
+            .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__badgeBoxes .badge:after {
+              content: "";
+              height: 0;
+              width: 0;
+              display: block;
+              position: absolute;
+              top: 0;
+              border: 1.2rem solid transparent;
+              z-index: 9999; }
+            .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__badgeBoxes .badge.primary-badge {
+              color: #fff;
+              background-color: #8cc63e;
+              padding-left: 1rem; }
+              .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__badgeBoxes .badge.primary-badge:after {
+                left: 100%;
+                border-top: 1.2rem solid #8cc63e;
+                border-bottom: 1.2rem solid #8cc63e;
+                border-left: 1.2rem solid #8cc63e; }
+            .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__badgeBoxes .badge.secondary-badge {
+              color: #fff;
+              background-color: #009afe;
+              padding-right: 1rem; }
+              .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__badgeBoxes .badge.secondary-badge:after {
+                right: 100%;
+                border-top: 1.2rem solid #009afe;
+                border-bottom: 1.2rem solid #009afe;
+                border-right: 1.2rem solid #009afe; }
+        .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__description {
+          border-radius: .75rem;
+          overflow: hidden;
+          position: relative;
+          width: 100%;
+          background-color: #ffffff;
+          box-shadow: 1px 1px 16px 2px #ebebeb;
+          margin-bottom: 4rem; }
+          .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__description .description__heading {
+            padding: 2rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+            .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__description .description__heading h4 {
+              font-size: 2rem;
+              font-family: "Raleway", sans-serif;
+              font-weight: 400;
+              line-height: 1.2;
+              color: #121212;
+              letter-spacing: 0.02rem;
+              margin: 0; }
+          .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__description .description__content {
+            padding: 2rem; }
+            .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__description .description__content p {
+              font-size: 1.6rem;
+              font-family: "Raleway", sans-serif;
+              font-weight: 400;
+              line-height: 1.5;
+              color: #121212;
+              letter-spacing: 0.01rem;
+              margin: 0; }
+              .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__description .description__content p:not(:last-child) {
+                margin: 0 0 2rem; }
+    .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar {
+      width: calc(35% - 15px); }
+      .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donationDetails {
+        background-color: #ffffff;
+        border: 2px solid #ddd;
+        border-radius: 2rem;
+        margin-bottom: 1.5rem;
+        padding: 1.5rem;
+        text-align: center; }
+        .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donationDetails .donationDetails__circleBox {
+          width: 164px;
+          height: 133px;
+          cursor: default;
+          position: relative;
+          margin: 0 auto; }
+          .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donationDetails .donationDetails__circleBox .circleBox__raisedPercent {
+            fill: #8d8d8d;
+            font-family: "Raleway", sans-serif;
+            font-size: 2.8rem;
+            font-weight: 600; }
+          .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donationDetails .donationDetails__circleBox .circleBox__progressDays {
+            fill: #8d8d8d;
+            font-family: "Raleway", sans-serif;
+            font-size: 1.4rem;
+            font-weight: 300; }
+        .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donationDetails .donationDetails__content .totalDonation {
+          font-size: 1.8rem;
+          line-height: 1.2;
+          color: #000;
+          letter-spacing: -.05rem;
+          font-weight: 300;
+          margin-bottom: 1.5rem; }
+          .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donationDetails .donationDetails__content .totalDonation span {
+            color: #666;
+            font-weight: 600; }
+        .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donationDetails .donationDetails__content .totalDonors {
+          display: block;
+          font-size: 1.6rem;
+          line-height: 1.2;
+          color: #8cc63e;
+          text-decoration: underline; }
+      .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donatebuttons {
+        text-align: center; }
+        .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donatebuttons .donatebuttons__heading {
+          font-family: "quikhand_regular";
+          font-weight: 400;
+          color: #666;
+          letter-spacing: .05rem;
+          font-size: 1.8rem;
+          line-height: 2.4rem;
+          margin-bottom: 0.8rem; }
+        .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donatebuttons .donatebuttons__btn {
+          cursor: pointer;
+          text-align: center;
+          text-decoration: none;
+          font-weight: 700;
+          font-size: 2rem;
+          line-height: 5.5rem;
+          color: #fff;
+          padding: 0 1.5rem;
+          border-radius: 3.3rem;
+          text-transform: uppercase;
+          height: 5.5rem;
+          margin-bottom: 0.8rem;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donatebuttons .donatebuttons__btn.btn-donation {
+            background: #ff8502;
+            border: 1px solid #ff8502; }
+          .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donatebuttons .donatebuttons__btn.btn-facebook {
+            background-color: #4c69ba;
+            border-color: #4c69ba; }
+            .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donatebuttons .donatebuttons__btn.btn-facebook span {
+              margin-right: 1rem; }
 
 /*# sourceMappingURL=style.min.css.map */

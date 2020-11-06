@@ -163,6 +163,7 @@
 }
 
 .donateModal {
+	$self: ".donateModal";
 
 	.modal-header {
 		position: relative;
@@ -210,7 +211,32 @@
 		padding: 3rem 4rem;
 		border: none;
 
-		form {
+		#{$self}__form {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			flex-grow: 1;
+
+			#{$self}__box {
+				width: calc(50% - 20px);
+
+				&--fullWidth {
+					width: 100%;
+				}
+
+				&--right {
+					display: flex;
+					justify-content: flex-end;
+				}
+
+				&--hide {
+					display: none !important;
+				}
+
+				&--show {
+					display: block !important;
+				}
+			}
 
 			.donateAmounts {
 				display: flex;
@@ -231,11 +257,12 @@
 						line-height: 1.2;
 						letter-spacing: 0.01rem;
 						color: $black_color;
-						padding: .75rem;
+						padding: 1.25rem;
 						border-radius: 4px;
 						border: 2px solid #d9d9d9;
 						text-align: center;
 
+						&:hover,
 						&.selected {
 							border: 2px solid $secondary_color;
 							background-color: $secondary_color;
@@ -309,6 +336,90 @@
 						line-height: 1.2;
 						letter-spacing: 0.01rem;
 						color: $black_color;
+					}
+
+					&#yourNote {
+						display: none;
+						height: 100px;
+						resize: none;
+					}
+				}
+
+				.checkbox {
+					$this: ".checkbox";
+
+					position: relative;
+					display: flex;
+					padding-left: 40px;
+
+					&__input {
+						opacity: 0;
+						width: 0;
+						height: 0;
+
+						&:checked + #{$this}__slider {
+							background-color: $secondary_color;
+						}
+
+						&:focus + #{$this}__slider {
+							box-shadow: 0 0 1px $secondary_color;
+						}
+
+						&:checked + #{$this}__slider:before {
+							transform: translateX(13px);
+						}
+					}
+
+					&__slider {
+						width: 30px;
+						height: 17px;
+						position: absolute;
+						cursor: pointer;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						background-color: #ccc;
+						border-radius: 17px;
+						transition: .4s;
+
+						&:before {
+							position: absolute;
+							content: "";
+							height: 13px;
+							width: 13px;
+							left: 2px;
+							bottom: 2px;
+							background-color: white;
+							border-radius: 50%;
+							transition: .4s;
+						}
+					}
+
+					&__text {
+						display: flex;
+						flex-direction: column;
+
+						.title {
+							display: block;
+							font-family: $secondary_font;
+							font-weight: 600;
+							font-size: 15px;
+							line-height: 1.5;
+							color: rgba(9, 23, 42, 0.5);
+							margin-bottom: 5px;
+							margin-top: -2.5px;
+						}
+
+						.subtitle {
+							display: block;
+							font-family: $secondary_font;
+							font-weight: 600;
+							font-size: 13px;
+							line-height: 1.5;
+							color: rgba(9, 23, 42, 0.4);
+							margin-bottom: 5px;
+						}
 					}
 				}
 			}

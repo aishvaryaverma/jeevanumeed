@@ -77,9 +77,9 @@
     &__sidebar {
         background: #fff;
         width: 96%;
-        padding: 10px 1px;
-        border-radius: 10px;
-        box-shadow: 1px 1px 16px 2px #ebebeb;
+        padding: 1rem .1rem;
+        border-radius: 1rem;
+        box-shadow: .1rem .1rem 1.6rem .2rem #ebebeb;
         z-index: 1;
 
         .sidebarMenu {
@@ -95,38 +95,38 @@
                 cursor: pointer;
 
                 &:not(:last-child) {
-                    box-shadow: 0 2px 0 0 #f2f2f2;
+                    box-shadow: 0 .2rem 0 0 #f2f2f2;
                 }
 
                 a {
                     display: flex;
 
-                    padding: 10px;
+                    padding: 1rem;
 
                     #{$this}__icon {
                         display: block;
-                        width: 37px;
-                        height: 34px;
+                        width: 3.7rem;
+                        height: 3.4rem;
                         background-image: url(../img/browsefundraisers/sprites_global.png);
 
                         &.medical {
-                            background-position: -36px -49px;
+                            background-position: -3.6rem -4.9rem;
                         }
 
                         &.ngo {
-                            background-position: -70px -134px;
+                            background-position: -7rem -13.4rem;
                         }
 
                         &.personalCause {
-                            background-position: -104px -133px;
+                            background-position: -10.4rem -13.3rem;
                         }
 
                         &.creativeIdeas {
-                            background-position: -176px -220px;
+                            background-position: -17.6rem -22rem;
                         }
 
                         &.acidAttacks {
-                            background-position: -135px -133px;
+                            background-position: -13.5rem -13.3rem;
                         }
                     }
 
@@ -150,23 +150,23 @@
                             background: url(../img/browsefundraisers/sprites_global_hover.png) 0 0;
 
                             &.medical {
-                                background-position: -36px -49px;
+                                background-position: -3.6rem -4.9rem;
                             }
 
                             &.ngo {
-                                background-position: -70px -134px;
+                                background-position: -7rem -13.4rem;
                             }
 
                             &.personalCause {
-                                background-position: -104px -133px;
+                                background-position: -10.4rem -13.3rem;
                             }
 
                             &.creativeIdeas {
-                                background-position: -176px -220px;
+                                background-position: -17.6rem -22rem;
                             }
 
                             &.acidAttacks {
-                                background-position: -135px -133px;
+                                background-position: -13.5rem -13.3rem;
                             }
                         }
 
@@ -206,10 +206,10 @@
 
             &__badgeBoxes {
                 position: absolute;
-                top: 10px;
+                top: 1rem;
                 left: 0;
                 z-index: 1;
-                width: calc(100% - 1px);
+                width: calc(100% - .1rem);
 
                 display: flex;
                 align-items: center;
@@ -218,7 +218,7 @@
                 .badge {
                     font-size: 1rem;
                     font-weight: 400;
-                    line-height: 24px;
+                    line-height: 2.4rem;
                     display: block;
                     padding: 0;
                     border-radius: 0;
@@ -232,33 +232,33 @@
                         display: block;
                         position: absolute;
                         top: 0;
-                        border: 12px solid transparent;
+                        border: 1.2rem solid transparent;
                         z-index: 9999;
                     }
 
                     &.primary-badge {
                         color: #fff;
                         background-color: $primary_color;
-                        padding-left: 10px;
+                        padding-left: 1rem;
 
                         &:after {
                             left: 100%;
-                            border-top: 12px solid $primary_color;
-                            border-bottom: 12px solid $primary_color;
-                            border-left: 12px solid $primary_color;
+                            border-top: 1.2rem solid $primary_color;
+                            border-bottom: 1.2rem solid $primary_color;
+                            border-left: 1.2rem solid $primary_color;
                         }
                     }
 
                     &.secondary-badge {
                         color: #fff;
                         background-color: $secondary_color;
-                        padding-right: 10px;
+                        padding-right: 1rem;
 
                         &:after {
                             right: 100%;
-                            border-top: 12px solid $secondary_color;
-                            border-bottom: 12px solid $secondary_color;
-                            border-right: 12px solid $secondary_color;
+                            border-top: 1.2rem solid $secondary_color;
+                            border-bottom: 1.2rem solid $secondary_color;
+                            border-right: 1.2rem solid $secondary_color;
                         }
                     }
                 }
@@ -266,8 +266,12 @@
 
             &__img {
 
-                img {
-                    width: 100%;
+                a {
+                    display: block;
+
+                    img {
+                        width: 100%;
+                    }
                 }
             }
 

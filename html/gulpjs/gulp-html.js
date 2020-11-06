@@ -10,7 +10,8 @@ const pages = [
 	path + "about-us.html",
 	path + "start-fundraiser.html",
 	path + "contact-us.html",
-	path + "browse-fundraisers.html"
+	path + "browse-fundraisers.html",
+	path + "fundraiser-details.html"
 ];
 
 // FOR HTML PAGES
