@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./layouts/_head.html', {
+        "title": "Fundraiser Details",
+        "description": ""
+    })
+</head>
+<body class="innerPage">
+    <main class="wrapper" role="main">
+        @@include('./layouts/_header.html')
+        
+        <div class="dashboardContent">
+            @@include('./layouts/_headerInner.html', {
+                activeRefer: "active"
+            })
+
+            <section class="dashboardContent__content">
+                <div class="container">
+                    <div class="dashboardContent__main">
+                        <div class="dashboardContent__details dashboardContent__details--fullWidth">
+                            <div class="referFormBox">
+                                <h3>Your loved one's life is important to us too!</h3>
+                                <form class="referFormBox__form">
+                                    <div class="form-group">
+                                        <input required="" type="text" class="form-control" placeholder="Full Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <input required="" type="email" class="form-control" placeholder="Email ID">
+                                    </div>
+                                    <div class="form-group">
+                                        <input required="" type="tel" class="form-control" placeholder="Phone Number">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">submit</button>
+                                </form>
+                                <div class="referFormBox__bottom">
+                                    <p>Refer another patient and get extra benefits<sup>*</sup> on your Fundraiser once that patients campaign is approved.</p>
+                                    <span class="text-muted">*Contact your Campaign Manager for further details</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        @@include('./layouts/_footer.html')
+    </main>
+    
+    @@include('./layouts/_scripts.html')
+</body>
+</html>

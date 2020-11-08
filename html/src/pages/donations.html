@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./layouts/_head.html', {
+        "title": "Fundraiser Details",
+        "description": ""
+    })
+</head>
+<body class="innerPage">
+    <main class="wrapper" role="main">
+        @@include('./layouts/_header.html')
+        
+        <div class="dashboardContent">
+            @@include('./layouts/_headerInner.html', {
+                activeDonations: "active"
+            })
+
+            <section class="dashboardContent__content">
+                <div class="container">
+                    <div class="dashboardContent__main">
+                        <div class="dashboardContent__details dashboardContent__details--fullWidth">
+                            <div class="usersdonations">
+                                <img src="https://image.flaticon.com/icons/svg/214/214305.svg" alt="">
+                                <h2>You haven't made any donations yet. Make an impact NOW!</h2>
+                                <a href="#!" class="btn btn-primary" data-toggle="modal" data-target="#donateModal">make a donation</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        @@include('./layouts/_footer.html')
+    </main>
+    
+    @@include('./layouts/_scripts.html')
+</body>
+</html>

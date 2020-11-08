@@ -211,6 +211,10 @@
 		padding: 3rem 4rem;
 		border: none;
 
+		@media (max-width: $mobileBig) {
+			padding: 1.5rem;
+		}
+
 		#{$self}__form {
 			display: flex;
 			flex-wrap: wrap;
@@ -219,6 +223,10 @@
 
 			#{$self}__box {
 				width: calc(50% - 20px);
+
+				@media (max-width: $mobileBig) {
+					width: 100%;
+				}
 
 				&--fullWidth {
 					width: 100%;
@@ -242,12 +250,22 @@
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
+				flex-wrap: wrap;
 
 				margin-bottom: 3rem;
+
+				@media (max-width: $mobileBig) {
+					margin-bottom: 1rem;
+				}
 
 				li {
 					display: block;
 					width: 22.5%;
+
+					@media (max-width: $mobileBig) {
+						width: calc(50% - 1rem);
+						margin: 0 0 2rem;
+					}
 
 					.donateAmount {
 						display: block;
@@ -267,6 +285,10 @@
 							border: 2px solid $secondary_color;
 							background-color: $secondary_color;
 							color: $white_color;
+						}
+
+						@media (max-width: $mobile - 1) {
+							padding: 1rem 0.5rem;
 						}
 					}
 
@@ -553,6 +575,11 @@
 			border-radius: 8px;
 			filter: drop-shadow(0 0 5px rgba(0, 0, 0, .17));
 			background-color: #fff;
+
+			@media (max-width: $desktopSmall - 1) {
+				width: 100%;
+				margin-bottom: 4rem;
+			}
 
 			.startFundraiserModal__name {
 

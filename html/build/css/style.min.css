@@ -2353,6 +2353,9 @@ img {
 .donateModal .modal-body {
   padding: 3rem 4rem;
   border: none; }
+  @media (max-width: 767px) {
+    .donateModal .modal-body {
+      padding: 1.5rem; } }
   .donateModal .modal-body .donateModal__form {
     display: flex;
     flex-wrap: wrap;
@@ -2360,6 +2363,9 @@ img {
     flex-grow: 1; }
     .donateModal .modal-body .donateModal__form .donateModal__box {
       width: calc(50% - 20px); }
+      @media (max-width: 767px) {
+        .donateModal .modal-body .donateModal__form .donateModal__box {
+          width: 100%; } }
       .donateModal .modal-body .donateModal__form .donateModal__box--fullWidth {
         width: 100%; }
       .donateModal .modal-body .donateModal__form .donateModal__box--right {
@@ -2373,10 +2379,18 @@ img {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
       margin-bottom: 3rem; }
+      @media (max-width: 767px) {
+        .donateModal .modal-body .donateModal__form .donateAmounts {
+          margin-bottom: 1rem; } }
       .donateModal .modal-body .donateModal__form .donateAmounts li {
         display: block;
         width: 22.5%; }
+        @media (max-width: 767px) {
+          .donateModal .modal-body .donateModal__form .donateAmounts li {
+            width: calc(50% - 1rem);
+            margin: 0 0 2rem; } }
         .donateModal .modal-body .donateModal__form .donateAmounts li .donateAmount {
           display: block;
           font-size: 1.8rem;
@@ -2393,6 +2407,9 @@ img {
             border: 2px solid #009afe;
             background-color: #009afe;
             color: #ffffff; }
+          @media (max-width: 479px) {
+            .donateModal .modal-body .donateModal__form .donateAmounts li .donateAmount {
+              padding: 1rem 0.5rem; } }
         .donateModal .modal-body .donateModal__form .donateAmounts li .typeDonateAmount {
           width: 100%;
           height: auto;
@@ -2599,6 +2616,10 @@ img {
       border-radius: 8px;
       filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.17));
       background-color: #fff; }
+      @media (max-width: 1023px) {
+        .startFundraiserModal__plans .startFundraiserModal__plan {
+          width: 100%;
+          margin-bottom: 4rem; } }
       .startFundraiserModal__plans .startFundraiserModal__plan .startFundraiserModal__name h2 {
         font-size: 2rem;
         letter-spacing: 0;
@@ -4598,10 +4619,10 @@ p {
   -moz-box-shadow: none;
   -o-box-shadow: none;
   box-shadow: none;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
+  -webkit-border-radius: 3rem;
+  -moz-border-radius: 3rem;
+  -o-border-radius: 3rem;
+  border-radius: 3rem;
   -webkit-transition: all 400ms ease-in-out;
   -moz-transition: all 400ms ease-in-out;
   -o-transition: all 400ms ease-in-out;
@@ -5463,22 +5484,51 @@ label.error {
   color: red; }
 
 .form-control {
-  font-family: "Raleway", sans-serif;
-  font-size: 15px;
-  height: auto;
-  padding: 10px;
-  color: #212121;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -o-border-radius: 0;
+  border: none;
   border-radius: 0;
-  -webkit-box-shadow: none !important;
-  -moz-box-shadow: none !important;
-  -o-box-shadow: none !important;
+  padding: 0 0 1rem;
+  border-bottom: 0.1rem solid rgba(139, 139, 139, 0.82);
+  font-size: 1.6rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: 0.01rem;
+  color: #000000;
+  outline: none !important;
   box-shadow: none !important; }
+  .form-control::-webkit-input-placeholder {
+    font-size: 1.6rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 0.01rem;
+    color: #000000; }
+  .form-control::-moz-placeholder {
+    font-size: 1.6rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 0.01rem;
+    color: #000000; }
+  .form-control:-ms-input-placeholder {
+    font-size: 1.6rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 0.01rem;
+    color: #000000; }
+  .form-control:-moz-placeholder {
+    font-size: 1.6rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 0.01rem;
+    color: #000000; }
   .form-control.smPadding {
     font-size: 14px;
     padding: 4px; }
+  .form-control:focus {
+    border-color: #8cc63e; }
 
 select.form-control.customDropdownIcon {
   background: url("../img/svg/caret-down.svg") 96% center no-repeat;
@@ -6251,32 +6301,25 @@ select.form-control.customDropdownIcon {
   z-index: 999;
   transition: all 0.25s ease-out;
   background-color: rgba(0, 0, 0, 0.52); }
+  @media (max-width: 1023px) {
+    .header {
+      background-color: #009afe;
+      border-bottom: .1rem solid #fff; } }
   .header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     transition: height 0.25s ease-out;
     position: relative; }
-    @media (max-width: 1023px) {
-      .header .container {
-        padding-top: 2rem;
-        padding-bottom: 2rem; } }
-    @media (max-width: 766px) {
-      .header .container {
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem; } }
   .header__logo {
     display: flex;
     align-items: flex-end;
     justify-content: center;
     width: 15rem;
     padding: .75rem 0; }
-    @media (max-width: 1023px) {
+    @media (max-width: 767px) {
       .header__logo {
-        width: 8.5rem; } }
-    @media (max-width: 480px) {
-      .header__logo {
-        width: 6.5rem; } }
+        padding: 1rem 0; } }
     .header__logo a {
       display: block; }
       .header__logo a img {
@@ -6286,10 +6329,11 @@ select.form-control.customDropdownIcon {
     @media (max-width: 1023px) {
       .header__links {
         position: absolute;
-        top: 100%;
+        top: calc(100% + 1px);
         right: 0;
         width: 100%;
-        background-color: #05164e;
+        background-color: #009afe;
+        transition: all 0.5s ease;
         transform-origin: 0 0 0;
         opacity: 0;
         visibility: hidden;
@@ -6309,7 +6353,8 @@ select.form-control.customDropdownIcon {
         .header__links ul {
           flex-direction: column;
           flex-wrap: wrap;
-          margin-bottom: 0; } }
+          margin-bottom: 0;
+          align-items: normal; } }
       .header__links ul > li {
         position: relative;
         display: flex;
@@ -6322,6 +6367,16 @@ select.form-control.customDropdownIcon {
           padding-right: 0;
           border-right: none;
           margin-right: 0; }
+        @media (max-width: 1279px) {
+          .header__links ul > li {
+            padding-right: 1.5rem;
+            margin-right: 1.5rem; } }
+        @media (max-width: 1023px) {
+          .header__links ul > li {
+            padding-right: 0;
+            border-right: none;
+            margin-right: 0;
+            border-bottom: .1rem solid #fff; } }
         .header__links ul > li > a {
           display: block;
           font-family: "Raleway", sans-serif;
@@ -6339,8 +6394,10 @@ select.form-control.customDropdownIcon {
           .header__links ul > li > a:hover {
             color: #8cc63e; }
         .header__links ul > li.donate-btn {
-          padding-left: 2.5rem;
-          padding-right: 4.4rem; }
+          padding-left: 2.5rem; }
+          @media (max-width: 1023px) {
+            .header__links ul > li.donate-btn {
+              padding: 2.5rem; } }
           .header__links ul > li.donate-btn a {
             background: #aee267;
             background: -moz-linear-gradient(180deg, #aee267 0%, #83bd35 100%);
@@ -6537,6 +6594,9 @@ select.form-control.customDropdownIcon {
   z-index: 1;
   padding: 8rem 0;
   background-color: #dbdfdf; }
+  @media (max-width: 1279px) {
+    .mainFooter {
+      padding: 4rem 0; } }
   .mainFooter__content {
     display: flex;
     align-items: center;
@@ -6545,6 +6605,14 @@ select.form-control.customDropdownIcon {
       width: 45%;
       display: flex;
       flex-direction: column; }
+      @media (max-width: 1279px) {
+        .mainFooter__content .item {
+          width: 75%; }
+          .mainFooter__content .item--first {
+            margin-bottom: 3rem; } }
+      @media (max-width: 767px) {
+        .mainFooter__content .item {
+          width: 100%; } }
       .mainFooter__content .item h3 {
         font-size: 5rem;
         font-family: "Raleway", sans-serif;
@@ -6553,6 +6621,9 @@ select.form-control.customDropdownIcon {
         color: #343434;
         letter-spacing: -0.005rem;
         margin: 0 0 2rem; }
+        @media (max-width: 479px) {
+          .mainFooter__content .item h3 {
+            font-size: 3.5rem; } }
       .mainFooter__content .item form .form-group {
         display: flex; }
         .mainFooter__content .item form .form-group .form-control {
@@ -6565,7 +6636,8 @@ select.form-control.customDropdownIcon {
           color: #505050;
           border: none;
           border-radius: 0;
-          padding: 15px; }
+          padding: 15px;
+          height: 100%; }
           .mainFooter__content .item form .form-group .form-control::-webkit-input-placeholder {
             font-size: 1.5rem;
             font-family: "Raleway", sans-serif;
@@ -6599,10 +6671,9 @@ select.form-control.customDropdownIcon {
             letter-spacing: 0.035rem;
             color: #505050; }
         .mainFooter__content .item form .form-group .btn-secondary {
-          background-image: url(../img/mainfooter/submitbtn-icon.png);
-          background-position: center center;
-          background-repeat: no-repeat;
-          background-size: 21px 15px; }
+          background: #009afe url(../img/mainfooter/submitbtn-icon.png) no-repeat center center/21px 15px;
+          border-radius: 0;
+          width: 67px; }
       .mainFooter__content .item h4 {
         font-size: 4rem;
         font-family: "quikhand_regular";
@@ -6611,6 +6682,9 @@ select.form-control.customDropdownIcon {
         letter-spacing: 0.01rem;
         color: #009afe;
         margin: 0 0 2rem; }
+        @media (max-width: 479px) {
+          .mainFooter__content .item h4 {
+            font-size: 3rem; } }
       .mainFooter__content .item_menuLinks {
         display: flex;
         align-items: center;
@@ -6619,9 +6693,11 @@ select.form-control.customDropdownIcon {
         margin: 0 0 3rem; }
         @media (max-width: 1023px) {
           .mainFooter__content .item_menuLinks {
-            flex-direction: column;
             flex-wrap: wrap;
             margin-bottom: 0; } }
+        @media (max-width: 767px) {
+          .mainFooter__content .item_menuLinks {
+            justify-content: center; } }
         .mainFooter__content .item_menuLinks > li {
           position: relative;
           display: flex;
@@ -6634,6 +6710,18 @@ select.form-control.customDropdownIcon {
             padding-right: 0;
             border-right: none;
             margin-right: 0; }
+          @media (max-width: 767px) {
+            .mainFooter__content .item_menuLinks > li {
+              border-right: none;
+              margin-right: 0;
+              margin-bottom: 2.5rem;
+              padding: 0 2rem; }
+              .mainFooter__content .item_menuLinks > li:last-child {
+                padding-right: 2rem; } }
+          @media (max-width: 479px) {
+            .mainFooter__content .item_menuLinks > li {
+              margin-bottom: 1.5rem;
+              padding: 0 1rem; } }
           .mainFooter__content .item_menuLinks > li > a {
             display: block;
             font-family: "Raleway", sans-serif;
@@ -6646,8 +6734,11 @@ select.form-control.customDropdownIcon {
             text-transform: uppercase; }
             @media (max-width: 1023px) {
               .mainFooter__content .item_menuLinks > li > a {
-                padding: 2.5rem;
+                padding: 1.5rem;
                 width: 100%; } }
+            @media (max-width: 767px) {
+              .mainFooter__content .item_menuLinks > li > a {
+                padding: 0; } }
             .mainFooter__content .item_menuLinks > li > a:hover {
               color: #009afe; }
       .mainFooter__content .item_socialLinks {
@@ -6655,6 +6746,12 @@ select.form-control.customDropdownIcon {
         align-items: center;
         justify-content: flex-end;
         padding-right: 4rem; }
+        @media (max-width: 1279px) {
+          .mainFooter__content .item_socialLinks {
+            padding-right: 0; } }
+        @media (max-width: 767px) {
+          .mainFooter__content .item_socialLinks {
+            justify-content: center; } }
         .mainFooter__content .item_socialLinks li {
           display: inline-block; }
           .mainFooter__content .item_socialLinks li a {
@@ -6670,7 +6767,10 @@ select.form-control.customDropdownIcon {
               transform: rotateY(360deg); }
               .mainFooter__content .item_socialLinks li a:hover i {
                 color: #009afe; }
-    @media (max-width: 1023px) {
+            @media (max-width: 767px) {
+              .mainFooter__content .item_socialLinks li a {
+                margin: 0 1rem; } }
+    @media (max-width: 1279px) {
       .mainFooter__content {
         flex-direction: column; } }
 
@@ -6696,21 +6796,25 @@ select.form-control.customDropdownIcon {
   position: relative; }
   @media (max-width: 1023px) {
     .mainBanner {
-      margin-top: 11.9rem;
-      background: #8cc63e; } }
+      margin-top: 7.939rem; } }
   @media (max-width: 767px) {
     .mainBanner {
-      margin-top: 10.9rem;
+      margin-top: 8.439rem;
       min-height: 56.8rem;
       padding: 0; } }
-  @media (max-width: 480px) {
-    .mainBanner {
-      margin-top: 9rem; } }
   @media (max-width: 767px) {
     .mainBanner__img {
-      display: none; } }
+      min-height: 56.8rem;
+      width: 100%;
+      position: relative; } }
   .mainBanner__img img {
-    width: 100%; }
+    width: auto;
+    height: 100%;
+    max-width: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
   .mainBanner__content {
     position: absolute;
     top: 50%;
@@ -6722,10 +6826,9 @@ select.form-control.customDropdownIcon {
     @media (max-width: 1023px) {
       .mainBanner__content {
         top: 50%;
-        left: 30%;
+        left: 20%;
         transform: translate(-50%, -50%);
         text-align: center;
-        padding: 0 1.5rem;
         width: 32.5rem; } }
     @media (max-width: 767px) {
       .mainBanner__content {
@@ -6746,7 +6849,7 @@ select.form-control.customDropdownIcon {
           font-size: 2rem; } }
       @media (max-width: 767px) {
         .mainBanner__content h3 {
-          font-size: 3rem;
+          font-size: 4rem;
           line-height: 1.5; } }
     .mainBanner__content h1 {
       font-size: 8rem;
@@ -6761,12 +6864,13 @@ select.form-control.customDropdownIcon {
         font-weight: 400; }
       @media (max-width: 1365px) {
         .mainBanner__content h1 {
-          font-size: 5rem; } }
+          font-size: 6rem; } }
       @media (max-width: 1023px) {
         .mainBanner__content h1 {
-          font-size: 4rem; } }
+          font-size: 5rem; } }
       @media (max-width: 767px) {
         .mainBanner__content h1 {
+          font-size: 6rem;
           margin-bottom: 2rem; } }
     .mainBanner__content .banner-btn {
       display: inline-block;
@@ -6787,14 +6891,13 @@ select.form-control.customDropdownIcon {
   padding: 8rem 0; }
   @media (max-width: 1279px) {
     .aboutus {
-      background-size: auto 100%;
-      background-position: center center; } }
+      background-size: auto 100%; } }
   @media (max-width: 1023px) {
     .aboutus {
       padding: 3rem 0; } }
   @media (max-width: 767px) {
     .aboutus {
-      background: #8cc63e none; } }
+      background: #d8ecf9 none; } }
   .aboutus__heading {
     display: flex;
     flex-direction: column;
@@ -6811,6 +6914,9 @@ select.form-control.customDropdownIcon {
       color: #212121;
       letter-spacing: 0.01rem;
       margin: 0; }
+      @media (max-width: 479px) {
+        .aboutus__heading h3 {
+          font-size: 3.5rem; } }
     .aboutus__heading p {
       font-size: 1.8rem;
       font-family: "Raleway", sans-serif;
@@ -6832,6 +6938,9 @@ select.form-control.customDropdownIcon {
       transition: all 0.5s ease;
       display: flex;
       flex-direction: column; }
+      @media (max-width: 767px) {
+        .aboutus__list ul li {
+          width: 100%; } }
       .aboutus__list ul li .img {
         display: flex;
         align-items: center;
@@ -6872,6 +6981,14 @@ select.form-control.customDropdownIcon {
         position: relative;
         z-index: 1;
         transform: scale(1.1); }
+        @media (max-width: 767px) {
+          .aboutus__list ul li.selected, .aboutus__list ul li:hover {
+            width: 100%;
+            transform: scale(1); } }
+      @media (max-width: 767px) {
+        .aboutus__list ul li.selected {
+          width: 100%;
+          transform: scale(1); } }
 
 .categories {
   background-color: #009afe; }
@@ -6895,6 +7012,9 @@ select.form-control.customDropdownIcon {
           display: inline-block;
           font-family: "quikhand_regular";
           font-weight: 400; }
+        @media (max-width: 479px) {
+          .categories__main .heading h3 {
+            font-size: 3.5rem; } }
     .categories__main .content {
       padding-bottom: 5rem; }
       .categories__main .content_details {
@@ -6951,12 +7071,18 @@ select.form-control.customDropdownIcon {
   background-color: #009afe; }
   .fundraisingStories__main {
     display: flex; }
+    @media (max-width: 767px) {
+      .fundraisingStories__main {
+        flex-direction: column; } }
   .fundraisingStories__img {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 50%;
     position: relative; }
+    @media (max-width: 767px) {
+      .fundraisingStories__img {
+        width: 100%; } }
     .fundraisingStories__img img {
       width: 100%; }
     .fundraisingStories__img .playButton {
@@ -6974,6 +7100,12 @@ select.form-control.customDropdownIcon {
     display: flex;
     justify-content: space-between;
     flex-direction: column; }
+    @media (max-width: 767px) {
+      .fundraisingStories__content {
+        width: 100%; } }
+    @media (max-width: 479px) {
+      .fundraisingStories__content {
+        padding: 2rem; } }
     .fundraisingStories__content:after {
       content: "";
       position: absolute;
@@ -6983,6 +7115,9 @@ select.form-control.customDropdownIcon {
       width: 20rem;
       height: 20rem;
       background: transparent url(../img/fundraisingStories/fundraisingStories-topRight.png) no-repeat center center/auto 100%; }
+      @media (max-width: 1023px) {
+        .fundraisingStories__content:after {
+          display: none; } }
     .fundraisingStories__content h3 {
       font-family: "Raleway", sans-serif;
       font-size: 4rem;
@@ -7002,6 +7137,11 @@ select.form-control.customDropdownIcon {
         color: #8cc63e;
         transform: rotate(-5deg);
         text-transform: none; }
+      @media (max-width: 479px) {
+        .fundraisingStories__content h3 {
+          font-size: 3.5rem; }
+          .fundraisingStories__content h3 span {
+            font-size: 4.5rem; } }
     .fundraisingStories__content .storiesSlider {
       padding-bottom: 4rem; }
       .fundraisingStories__content .storiesSlider p {
@@ -7041,6 +7181,11 @@ select.form-control.customDropdownIcon {
         font-size: 4rem;
         font-family: "quikhand_regular";
         font-weight: 400; }
+      @media (max-width: 479px) {
+        .topFundraiser__heading h3 {
+          font-size: 3.5rem; }
+          .topFundraiser__heading h3 span {
+            font-size: 2.5rem; } }
   .topFundraiser__slider {
     padding-bottom: 5rem; }
     .topFundraiser__slider .topFundraiserItem {
@@ -7048,7 +7193,6 @@ select.form-control.customDropdownIcon {
       border-radius: .75rem;
       overflow: hidden;
       display: flex;
-      align-items: center;
       justify-content: center;
       flex-direction: column;
       text-align: center; }
@@ -7162,10 +7306,16 @@ select.form-control.customDropdownIcon {
   text-align: center;
   background: #ffffff url(../img/yourSupport/yourSupport-bg.jpg) no-repeat left top/cover;
   padding: 8rem 0; }
+  @media (max-width: 479px) {
+    .yourSupport {
+      padding: 2rem 0; } }
   .yourSupport__heading {
     font-size: 6rem;
     color: #ffffff;
     margin: 0 0 2rem; }
+    @media (max-width: 479px) {
+      .yourSupport__heading {
+        font-size: 3.5rem; } }
   .yourSupport__btn {
     display: inline-block;
     font-family: "Roboto", sans-serif;
@@ -7203,6 +7353,11 @@ select.form-control.customDropdownIcon {
       font-family: "quikhand_regular";
       color: #009afe;
       font-weight: 400; }
+    @media (max-width: 479px) {
+      .upcomingEvents__heading h3 {
+        font-size: 3.5rem; }
+        .upcomingEvents__heading h3 span {
+          font-size: 3.5rem; } }
   .upcomingEvents__heading.alternateHeading {
     flex-direction: column; }
     .upcomingEvents__heading.alternateHeading h3 {
@@ -7213,6 +7368,9 @@ select.form-control.customDropdownIcon {
       color: #212121;
       letter-spacing: 0.01rem;
       margin: 0 0 2rem; }
+      @media (max-width: 479px) {
+        .upcomingEvents__heading.alternateHeading h3 {
+          font-size: 3.5rem; } }
     .upcomingEvents__heading.alternateHeading p {
       font-size: 1.6rem;
       font-family: "Raleway", sans-serif;
@@ -7406,9 +7564,11 @@ select.form-control.customDropdownIcon {
       font-weight: 400;
       line-height: 1.2;
       color: #ffffff; }
-    @media (max-width: 767px) {
+    @media (max-width: 479px) {
       .aboutusPage h3 {
-        font-size: 4.5rem; } }
+        font-size: 3.5rem; }
+        .aboutusPage h3 span {
+          font-size: 5rem; } }
 
 .aboutUs {
   background: transparent url(../img/aboutus/aboutuspage-bg.png) no-repeat right top -18px/25.3%; }
@@ -7418,6 +7578,9 @@ select.form-control.customDropdownIcon {
     text-align: center;
     flex-direction: column;
     margin: 0 0 4rem; }
+    @media (max-width: 1023px) {
+      .aboutUs__heading {
+        margin: 0 0 2rem; } }
     .aboutUs__heading h3 {
       font-size: 4.5rem;
       font-family: "quikhand_regular";
@@ -7426,6 +7589,9 @@ select.form-control.customDropdownIcon {
       color: #212121;
       letter-spacing: 0.01rem;
       margin: 0 0 2rem; }
+      @media (max-width: 479px) {
+        .aboutUs__heading h3 {
+          font-size: 3rem; } }
     .aboutUs__heading p {
       font-size: 1.6rem;
       font-family: "Raleway", sans-serif;
@@ -7437,16 +7603,23 @@ select.form-control.customDropdownIcon {
   .aboutUs__items {
     display: flex;
     flex-wrap: wrap; }
+    @media (max-width: 1023px) {
+      .aboutUs__items {
+        margin: 0 0 2rem; } }
     .aboutUs__items .aboutUsItem {
       position: relative;
-      width: calc((100% / 3) - 1.4rem);
-      margin-right: 2.1rem;
-      margin-bottom: 2.1rem;
+      width: calc(100% / 3);
       text-align: center;
       border-right: 1px solid #cdd2d5; }
       .aboutUs__items .aboutUsItem:nth-child(3n+3) {
-        margin-right: 0;
         border-right: none; }
+      @media (max-width: 767px) {
+        .aboutUs__items .aboutUsItem {
+          width: 100%;
+          border-right: none;
+          border-bottom: 1px solid #cdd2d5; }
+          .aboutUs__items .aboutUsItem:nth-child(3n+3) {
+            border-bottom: none; } }
       .aboutUs__items .aboutUsItem__content {
         width: 100%;
         padding: 2rem; }
@@ -7461,6 +7634,14 @@ select.form-control.customDropdownIcon {
           .aboutUs__items .aboutUsItem__content .heading span {
             font-size: 6rem;
             font-weight: 300; }
+          @media (max-width: 1023px) {
+            .aboutUs__items .aboutUsItem__content .heading {
+              font-size: 6rem; }
+              .aboutUs__items .aboutUsItem__content .heading span {
+                font-size: 4rem; } }
+          @media (max-width: 479px) {
+            .aboutUs__items .aboutUsItem__content .heading {
+              font-size: 3.5rem; } }
         .aboutUs__items .aboutUsItem__content .discription {
           font-size: 2rem;
           font-family: "Raleway", sans-serif;
@@ -7475,7 +7656,10 @@ select.form-control.customDropdownIcon {
   padding-top: 0;
   position: relative; }
   .ourMission .transformY50 {
-    transform: translateY(-50px); }
+    transform: translateY(-5rem); }
+    @media (max-width: 1023px) {
+      .ourMission .transformY50 {
+        transform: translateY(-2.5rem); } }
   .ourMission__heading {
     display: flex;
     justify-content: center;
@@ -7483,12 +7667,15 @@ select.form-control.customDropdownIcon {
     flex-direction: column;
     background-color: #ffffff;
     padding: 4rem;
-    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.13); }
+    box-shadow: 0 0 1rem 2px rgba(0, 0, 0, 0.13); }
+    @media (max-width: 479px) {
+      .ourMission__heading {
+        padding: 2rem; } }
     .ourMission__heading .topRightCorner {
       position: absolute;
       top: 0;
       right: 0;
-      transform: translateY(-20px);
+      transform: translateY(-2rem);
       z-index: 1; }
     .ourMission__heading h3 {
       font-size: 4.5rem;
@@ -7498,6 +7685,9 @@ select.form-control.customDropdownIcon {
       color: #212121;
       letter-spacing: 0.01rem;
       margin: 0 0 2rem; }
+      @media (max-width: 479px) {
+        .ourMission__heading h3 {
+          font-size: 3.5rem; } }
     .ourMission__heading p {
       font-size: 1.6rem;
       font-family: "Raleway", sans-serif;
@@ -7511,11 +7701,14 @@ select.form-control.customDropdownIcon {
   .ourMission.partnerMission .ourMission__main {
     background-color: #ffffff;
     padding: 4rem;
-    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.13);
+    box-shadow: 0 0 1rem 2px rgba(0, 0, 0, 0.13);
     display: flex;
     justify-content: center;
     text-align: center;
     flex-direction: column; }
+    @media (max-width: 767px) {
+      .ourMission.partnerMission .ourMission__main {
+        padding: 2rem; } }
   .ourMission.partnerMission .ourMission__heading {
     background-color: transparent;
     padding: 0;
@@ -7535,8 +7728,14 @@ select.form-control.customDropdownIcon {
         font-weight: 400;
         line-height: 1.2;
         color: #ffffff; }
+      @media (max-width: 479px) {
+        .ourMission.partnerMission .ourMission__heading h3 {
+          font-size: 3.5rem; } }
   .ourMission.partnerMission .ourMission__form form .form-group {
     margin-bottom: 4rem; }
+    @media (max-width: 767px) {
+      .ourMission.partnerMission .ourMission__form form .form-group {
+        margin-bottom: 2rem; } }
     .ourMission.partnerMission .ourMission__form form .form-group .form-control {
       border: none;
       border-radius: 0;
@@ -7577,6 +7776,14 @@ select.form-control.customDropdownIcon {
         letter-spacing: 0.01rem;
         color: #000000; }
 
+@media (max-width: 1023px) {
+  .awarness__heading {
+    margin-bottom: 2rem; } }
+
+@media (max-width: 767px) {
+  .awarness__heading {
+    text-align: center; } }
+
 .awarness__heading h3 {
   font-size: 4.5rem;
   font-family: "quikhand_regular";
@@ -7585,6 +7792,9 @@ select.form-control.customDropdownIcon {
   color: #212121;
   letter-spacing: 0.01rem;
   margin: 0 0 2rem; }
+  @media (max-width: 479px) {
+    .awarness__heading h3 {
+      font-size: 3.5rem; } }
 
 .awarness__heading p {
   font-size: 1.6rem;
@@ -7602,6 +7812,9 @@ select.form-control.customDropdownIcon {
   flex-direction: column;
   text-align: center;
   margin: 0 0 4rem; }
+  @media (max-width: 767px) {
+    .ourPartners__heading {
+      margin: 0 0 2rem; } }
   .ourPartners__heading h3 {
     font-size: 4.5rem;
     font-family: "quikhand_regular";
@@ -7610,6 +7823,9 @@ select.form-control.customDropdownIcon {
     color: #009afe;
     letter-spacing: 0.01rem;
     margin: 0 0 2rem; }
+    @media (max-width: 479px) {
+      .ourPartners__heading h3 {
+        font-size: 3rem; } }
   .ourPartners__heading p {
     font-size: 1.6rem;
     font-family: "Raleway", sans-serif;
@@ -7628,10 +7844,16 @@ select.form-control.customDropdownIcon {
   align-items: center;
   justify-content: center;
   width: calc(25% - 15px);
-  margin-right: 20px;
+  margin-right: 2rem;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.22); }
   .ourPartners__logo:nth-child(4n+4) {
     margin-right: 0; }
+  @media (max-width: 767px) {
+    .ourPartners__logo {
+      width: calc(50% - 1rem);
+      margin-bottom: 2rem; }
+      .ourPartners__logo:nth-child(2n+2) {
+        margin-right: 0; } }
   .ourPartners__logo a {
     display: block;
     text-align: center; }
@@ -7647,6 +7869,12 @@ select.form-control.customDropdownIcon {
   padding-top: 6%;
   min-height: 45rem;
   text-align: center; }
+  @media (max-width: 1023px) {
+    .startFundraiserPage {
+      padding-top: 11%; } }
+  @media (max-width: 767px) {
+    .startFundraiserPage {
+      padding-top: 10rem; } }
   .startFundraiserPage h3 {
     font-size: 5rem;
     font-family: "Raleway", sans-serif;
@@ -7663,7 +7891,9 @@ select.form-control.customDropdownIcon {
       color: #ffffff; }
     @media (max-width: 767px) {
       .startFundraiserPage h3 {
-        font-size: 4.5rem; } }
+        font-size: 3.5rem; }
+        .startFundraiserPage h3 span {
+          font-size: 5rem; } }
 
 .startFundraiser {
   padding: 0;
@@ -7676,12 +7906,18 @@ select.form-control.customDropdownIcon {
     display: flex;
     justify-content: center;
     flex-direction: column; }
+    @media (max-width: 767px) {
+      .startFundraiser__main {
+        padding: 1.5rem 1.5rem 0; } }
   .startFundraiser__heading {
     background-color: transparent;
     padding: 0;
     box-shadow: none;
     text-align: center;
     margin: 0 0 4rem; }
+    @media (max-width: 767px) {
+      .startFundraiser__heading {
+        margin: 0 0 2rem; } }
     .startFundraiser__heading h3 {
       font-size: 4.5rem;
       font-family: "Raleway", sans-serif;
@@ -7696,6 +7932,9 @@ select.form-control.customDropdownIcon {
         font-weight: 400;
         line-height: 1.2;
         color: #ffffff; }
+      @media (max-width: 767px) {
+        .startFundraiser__heading h3 {
+          font-size: 3.5rem; } }
   .startFundraiser__form .stepProgress {
     display: flex;
     align-items: center;
@@ -7707,6 +7946,9 @@ select.form-control.customDropdownIcon {
       display: flex;
       margin-right: 1rem;
       height: 0.8rem; }
+      @media (max-width: 767px) {
+        .startFundraiser__form .stepProgress__box {
+          width: calc(100% - 8.12rem) !important; } }
     .startFundraiser__form .stepProgress__bar {
       display: flex;
       -webkit-box-orient: vertical;
@@ -7746,47 +7988,11 @@ select.form-control.customDropdownIcon {
       font-size: 2rem;
       color: #666;
       margin: 0; }
+    @media (max-width: 767px) {
+      .startFundraiser__form .selectOptionBox {
+        border-radius: 0; } }
   .startFundraiser__form .form-group {
     margin-bottom: 4rem; }
-    .startFundraiser__form .form-group .form-control {
-      border: none;
-      border-radius: 0;
-      padding: 0 0 1rem;
-      border-bottom: 0.1rem solid rgba(139, 139, 139, 0.82);
-      font-size: 1.6rem;
-      font-family: "Raleway", sans-serif;
-      font-weight: 300;
-      line-height: 1.2;
-      letter-spacing: 0.01rem;
-      color: #000000; }
-      .startFundraiser__form .form-group .form-control::-webkit-input-placeholder {
-        font-size: 1.6rem;
-        font-family: "Raleway", sans-serif;
-        font-weight: 300;
-        line-height: 1.2;
-        letter-spacing: 0.01rem;
-        color: #000000; }
-      .startFundraiser__form .form-group .form-control::-moz-placeholder {
-        font-size: 1.6rem;
-        font-family: "Raleway", sans-serif;
-        font-weight: 300;
-        line-height: 1.2;
-        letter-spacing: 0.01rem;
-        color: #000000; }
-      .startFundraiser__form .form-group .form-control:-ms-input-placeholder {
-        font-size: 1.6rem;
-        font-family: "Raleway", sans-serif;
-        font-weight: 300;
-        line-height: 1.2;
-        letter-spacing: 0.01rem;
-        color: #000000; }
-      .startFundraiser__form .form-group .form-control:-moz-placeholder {
-        font-size: 1.6rem;
-        font-family: "Raleway", sans-serif;
-        font-weight: 300;
-        line-height: 1.2;
-        letter-spacing: 0.01rem;
-        color: #000000; }
   .startFundraiser__form .btn-primary {
     padding: 1.5rem 7.5rem;
     border-radius: 3.5rem;
@@ -7978,6 +8184,12 @@ select.form-control.customDropdownIcon {
   min-height: 45rem;
   text-align: center;
   position: relative; }
+  @media (max-width: 1023px) {
+    .browseFundraisersPage {
+      padding-top: 80px; } }
+  @media (max-width: 767px) {
+    .browseFundraisersPage {
+      padding-top: 84px; } }
   .browseFundraisersPage h3 {
     font-size: 5rem;
     font-family: "Raleway", sans-serif;
@@ -7994,7 +8206,10 @@ select.form-control.customDropdownIcon {
       color: #ffffff; }
     @media (max-width: 767px) {
       .browseFundraisersPage h3 {
-        font-size: 4.5rem; } }
+        font-size: 3.5rem;
+        margin: 0 0 2rem; }
+        .browseFundraisersPage h3 span {
+          font-size: 4.5rem; } }
   .browseFundraisersPage .fundraisersDetails {
     background: rgba(225, 225, 225, 0.1);
     width: 90%;
@@ -8004,7 +8219,12 @@ select.form-control.customDropdownIcon {
     .browseFundraisersPage .fundraisersDetails ul {
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       margin: 0; }
+      @media (max-width: 479px) {
+        .browseFundraisersPage .fundraisersDetails ul {
+          flex-direction: column;
+          align-items: center; } }
       .browseFundraisersPage .fundraisersDetails ul li {
         list-style: none;
         display: inline-block;
@@ -8028,11 +8248,13 @@ select.form-control.customDropdownIcon {
 
 .browseFundraisers__sidebar {
   background: #fff;
-  width: 96%;
   padding: 1rem .1rem;
   border-radius: 1rem;
   box-shadow: .1rem .1rem 1.6rem .2rem #ebebeb;
   z-index: 1; }
+  @media (max-width: 1023px) {
+    .browseFundraisers__sidebar {
+      margin-bottom: 4rem; } }
   .browseFundraisers__sidebar .sidebarMenu {
     width: 100%;
     display: flex;
@@ -8103,6 +8325,22 @@ select.form-control.customDropdownIcon {
       margin-right: 0; }
     .browseFundraisers__fundraisers .browseFundraisersBox:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)) {
       margin-top: 2.1rem; }
+    @media (max-width: 767px) {
+      .browseFundraisers__fundraisers .browseFundraisersBox {
+        width: calc((100% / 2) - 1rem);
+        margin-right: 2rem; }
+        .browseFundraisers__fundraisers .browseFundraisersBox:nth-child(3n+3) {
+          margin-right: 2rem; }
+        .browseFundraisers__fundraisers .browseFundraisersBox:nth-child(2n+2) {
+          margin-right: 0; }
+        .browseFundraisers__fundraisers .browseFundraisersBox:not(:nth-child(1)):not(:nth-child(2)) {
+          margin-top: 2.1rem; } }
+    @media (max-width: 479px) {
+      .browseFundraisers__fundraisers .browseFundraisersBox {
+        width: 100%;
+        margin-right: 0 !important; }
+        .browseFundraisers__fundraisers .browseFundraisersBox:not(:nth-child(1)) {
+          margin-top: 2.1rem; } }
     .browseFundraisers__fundraisers .browseFundraisersBox__badgeBoxes {
       position: absolute;
       top: 1rem;
@@ -8222,6 +8460,9 @@ select.form-control.customDropdownIcon {
           letter-spacing: 0.01rem;
           padding: 1rem 3rem;
           width: 100%; }
+          @media (max-width: 767px) {
+            .browseFundraisers__fundraisers .browseFundraisersBox__content .buttonSection .donateNow-btn {
+              padding: 1rem 2rem; } }
       .browseFundraisers__fundraisers .browseFundraisersBox__content .socialIcons {
         display: flex;
         align-items: center;
@@ -8245,249 +8486,789 @@ select.form-control.customDropdownIcon {
             .browseFundraisers__fundraisers .browseFundraisersBox__content .socialIcons li a img {
               width: 100%; }
 
-.fundraiserDetailsPage {
-  display: flex;
-  flex-direction: column;
-  padding-top: 8%;
-  min-height: 45rem;
-  text-align: center;
-  position: relative; }
-  .fundraiserDetailsPage h3 {
-    font-size: 5rem;
-    font-family: "Raleway", sans-serif;
-    font-weight: 700;
-    line-height: 1.5;
-    color: #ffffff;
-    margin: 0 0 4rem; }
-    .fundraiserDetailsPage h3 span {
-      display: inline-block;
-      font-size: 7rem;
-      font-family: "quikhand_regular";
-      font-weight: 400;
-      line-height: 1.2;
-      color: #ffffff; }
+.fundraiserDetails {
+  padding-top: 84px; }
+  .fundraiserDetails__main {
+    display: flex;
+    flex-direction: column; }
+    .fundraiserDetails__main .fundraiserDetails__heading {
+      text-align: center;
+      margin: 4rem 0; }
+      @media (max-width: 767px) {
+        .fundraiserDetails__main .fundraiserDetails__heading {
+          margin: 2rem 0; } }
+      .fundraiserDetails__main .fundraiserDetails__heading h2 {
+        font-size: 3rem;
+        line-height: 3.6rem;
+        color: #000;
+        letter-spacing: -.05rem;
+        font-weight: 400;
+        text-transform: capitalize;
+        margin: 0; }
+        @media (max-width: 767px) {
+          .fundraiserDetails__main .fundraiserDetails__heading h2 {
+            font-size: 2rem;
+            line-height: 1.2; } }
+    .fundraiserDetails__main .fundraiserDetails__content {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details {
+        width: calc(65% - 15px); }
+        .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox {
+          width: 100%;
+          display: flex;
+          flex-direction: column; }
+          .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__img {
+            border-radius: .75rem;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            padding: .75rem;
+            background-color: #ffffff;
+            box-shadow: 1px 1px 16px 2px #ebebeb;
+            margin-bottom: 4rem; }
+            .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__img img {
+              width: 100%;
+              border-radius: .75rem; }
+          .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__badgeBoxes {
+            position: absolute;
+            top: 2rem;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; }
+            .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__badgeBoxes .badge {
+              font-size: 1rem;
+              font-weight: 400;
+              line-height: 2.4rem;
+              display: block;
+              padding: 0;
+              border-radius: 0;
+              position: relative;
+              text-transform: uppercase; }
+              .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__badgeBoxes .badge:after {
+                content: "";
+                height: 0;
+                width: 0;
+                display: block;
+                position: absolute;
+                top: 0;
+                border: 1.2rem solid transparent;
+                z-index: 9999; }
+              .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__badgeBoxes .badge.primary-badge {
+                color: #fff;
+                background-color: #8cc63e;
+                padding-left: 1rem; }
+                .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__badgeBoxes .badge.primary-badge:after {
+                  left: 100%;
+                  border-top: 1.2rem solid #8cc63e;
+                  border-bottom: 1.2rem solid #8cc63e;
+                  border-left: 1.2rem solid #8cc63e; }
+              .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__badgeBoxes .badge.secondary-badge {
+                color: #fff;
+                background-color: #009afe;
+                padding-right: 1rem; }
+                .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__badgeBoxes .badge.secondary-badge:after {
+                  right: 100%;
+                  border-top: 1.2rem solid #009afe;
+                  border-bottom: 1.2rem solid #009afe;
+                  border-right: 1.2rem solid #009afe; }
+          .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__description {
+            border-radius: .75rem;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            background-color: #ffffff;
+            box-shadow: 1px 1px 16px 2px #ebebeb;
+            margin-bottom: 4rem; }
+            .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__description .description__heading {
+              padding: 2rem;
+              border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+              .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__description .description__heading h4 {
+                font-size: 2rem;
+                font-family: "Raleway", sans-serif;
+                font-weight: 400;
+                line-height: 1.2;
+                color: #121212;
+                letter-spacing: 0.02rem;
+                margin: 0; }
+            .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__description .description__content {
+              padding: 2rem; }
+              .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__description .description__content p {
+                font-size: 1.6rem;
+                font-family: "Raleway", sans-serif;
+                font-weight: 400;
+                line-height: 1.5;
+                color: #121212;
+                letter-spacing: 0.01rem;
+                margin: 0; }
+                .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__description .description__content p:not(:last-child) {
+                  margin: 0 0 2rem; }
+        @media (max-width: 767px) {
+          .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details {
+            width: 100%; } }
+      .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar {
+        width: calc(35% - 15px); }
+        @media (max-width: 767px) {
+          .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar {
+            width: 100%;
+            margin-bottom: 2rem; } }
+        .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donationDetails {
+          background-color: #ffffff;
+          border: 2px solid #ddd;
+          border-radius: 2rem;
+          margin-bottom: 1.5rem;
+          padding: 1.5rem;
+          text-align: center; }
+          .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donationDetails .donationDetails__circleBox {
+            width: 164px;
+            height: 133px;
+            cursor: default;
+            position: relative;
+            margin: 0 auto; }
+            .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donationDetails .donationDetails__circleBox .circleBox__raisedPercent {
+              fill: #8d8d8d;
+              font-family: "Raleway", sans-serif;
+              font-size: 2.8rem;
+              font-weight: 600; }
+            .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donationDetails .donationDetails__circleBox .circleBox__progressDays {
+              fill: #8d8d8d;
+              font-family: "Raleway", sans-serif;
+              font-size: 1.4rem;
+              font-weight: 300; }
+          .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donationDetails .donationDetails__content .totalDonation {
+            font-size: 1.8rem;
+            line-height: 1.2;
+            color: #000;
+            letter-spacing: -.05rem;
+            font-weight: 300;
+            margin-bottom: 1.5rem; }
+            .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donationDetails .donationDetails__content .totalDonation span {
+              color: #666;
+              font-weight: 600; }
+          .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donationDetails .donationDetails__content .totalDonors {
+            display: block;
+            font-size: 1.6rem;
+            line-height: 1.2;
+            color: #8cc63e;
+            text-decoration: underline; }
+        .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donatebuttons {
+          text-align: center; }
+          .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donatebuttons .donatebuttons__heading {
+            font-family: "quikhand_regular";
+            font-weight: 400;
+            color: #666;
+            letter-spacing: .05rem;
+            font-size: 1.8rem;
+            line-height: 2.4rem;
+            margin-bottom: 0.8rem; }
+          .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donatebuttons .donatebuttons__btn {
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 2rem;
+            line-height: 5.5rem;
+            color: #fff;
+            padding: 0 1.5rem;
+            border-radius: 3.3rem;
+            text-transform: uppercase;
+            height: 5.5rem;
+            margin-bottom: 0.8rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center; }
+            .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donatebuttons .donatebuttons__btn.btn-donation {
+              background: #ff8502;
+              border: 1px solid #ff8502; }
+            .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donatebuttons .donatebuttons__btn.btn-facebook {
+              background-color: #4c69ba;
+              border-color: #4c69ba; }
+              .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donatebuttons .donatebuttons__btn.btn-facebook span {
+                margin-right: 1rem; }
+
+.dashboardContent {
+  padding-top: 12.4rem; }
+  .dashboardContent__tabs {
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 80;
+    top: 78px;
+    left: 0; }
     @media (max-width: 767px) {
-      .fundraiserDetailsPage h3 {
-        font-size: 4.5rem; } }
-  .fundraiserDetailsPage .fundraiserDetails {
-    background: rgba(225, 225, 225, 0.1);
-    width: 90%;
-    border-radius: 1rem;
-    padding: 2rem 0;
-    margin: 0 auto; }
-    .fundraiserDetailsPage .fundraiserDetails ul {
+      .dashboardContent__tabs {
+        top: 84px; } }
+    .dashboardContent__tabs:after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: #ebebeb; }
+    .dashboardContent__tabs ul {
       display: flex;
       justify-content: center;
-      margin: 0; }
-      .fundraiserDetailsPage .fundraiserDetails ul li {
+      margin: 0;
+      /* Track */
+      /* Handle */
+      /* Handle on hover */ }
+      @media (max-width: 767px) {
+        .dashboardContent__tabs ul {
+          display: flex;
+          justify-content: flex-start;
+          overflow: auto;
+          max-width: 100%; } }
+      .dashboardContent__tabs ul::-webkit-scrollbar {
+        height: 2px; }
+      .dashboardContent__tabs ul::-webkit-scrollbar-track {
+        background: #f1f1f1; }
+      .dashboardContent__tabs ul::-webkit-scrollbar-thumb {
+        background: #8cc63e; }
+      .dashboardContent__tabs ul::-webkit-scrollbar-thumb:hover {
+        background: #008be5; }
+      .dashboardContent__tabs ul li {
         list-style: none;
         display: inline-block;
-        padding: .5rem 1rem;
-        max-width: 18.5rem; }
-        .fundraiserDetailsPage .fundraiserDetails ul li h2 {
-          color: #fff;
-          font-size: 3.6rem;
-          font-family: "Raleway", sans-serif;
-          line-height: 1.2;
-          letter-spacing: -.05rem;
-          font-weight: 400;
-          margin-bottom: .5rem; }
-        .fundraiserDetailsPage .fundraiserDetails ul li span {
-          display: inline-block;
-          font-size: 1.6rem;
-          font-family: "Raleway", sans-serif;
-          font-weight: 400;
-          line-height: 1.5;
-          color: #fff; }
-
-.fundraiserDetails__main {
-  display: flex;
-  flex-direction: column; }
-  .fundraiserDetails__main .fundraiserDetails__heading {
-    text-align: center;
-    margin: 4rem 0; }
-    .fundraiserDetails__main .fundraiserDetails__heading h2 {
-      font-size: 3rem;
-      line-height: 3.6rem;
-      color: #000;
-      letter-spacing: -.05rem;
-      font-weight: 400;
-      text-transform: capitalize;
-      margin: 0; }
-  .fundraiserDetails__main .fundraiserDetails__content {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-wrap: wrap; }
-    .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details {
-      width: calc(65% - 15px); }
-      .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox {
-        width: 100%;
-        display: flex;
-        flex-direction: column; }
-        .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__img {
-          border-radius: .75rem;
-          overflow: hidden;
-          position: relative;
-          width: 100%;
-          padding: .75rem;
-          background-color: #ffffff;
-          box-shadow: 1px 1px 16px 2px #ebebeb;
-          margin-bottom: 4rem; }
-          .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__img img {
-            width: 100%;
-            border-radius: .75rem; }
-        .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__badgeBoxes {
-          position: absolute;
-          top: 2rem;
-          left: 0;
-          z-index: 1;
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: space-between; }
-          .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__badgeBoxes .badge {
-            font-size: 1rem;
-            font-weight: 400;
-            line-height: 2.4rem;
-            display: block;
-            padding: 0;
-            border-radius: 0;
-            position: relative;
-            text-transform: uppercase; }
-            .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__badgeBoxes .badge:after {
-              content: "";
-              height: 0;
-              width: 0;
-              display: block;
-              position: absolute;
-              top: 0;
-              border: 1.2rem solid transparent;
-              z-index: 9999; }
-            .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__badgeBoxes .badge.primary-badge {
-              color: #fff;
-              background-color: #8cc63e;
-              padding-left: 1rem; }
-              .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__badgeBoxes .badge.primary-badge:after {
-                left: 100%;
-                border-top: 1.2rem solid #8cc63e;
-                border-bottom: 1.2rem solid #8cc63e;
-                border-left: 1.2rem solid #8cc63e; }
-            .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__badgeBoxes .badge.secondary-badge {
-              color: #fff;
-              background-color: #009afe;
-              padding-right: 1rem; }
-              .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__badgeBoxes .badge.secondary-badge:after {
-                right: 100%;
-                border-top: 1.2rem solid #009afe;
-                border-bottom: 1.2rem solid #009afe;
-                border-right: 1.2rem solid #009afe; }
-        .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__description {
-          border-radius: .75rem;
-          overflow: hidden;
-          position: relative;
-          width: 100%;
-          background-color: #ffffff;
-          box-shadow: 1px 1px 16px 2px #ebebeb;
-          margin-bottom: 4rem; }
-          .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__description .description__heading {
-            padding: 2rem;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
-            .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__description .description__heading h4 {
-              font-size: 2rem;
-              font-family: "Raleway", sans-serif;
-              font-weight: 400;
-              line-height: 1.2;
-              color: #121212;
-              letter-spacing: 0.02rem;
-              margin: 0; }
-          .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__description .description__content {
-            padding: 2rem; }
-            .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__description .description__content p {
-              font-size: 1.6rem;
-              font-family: "Raleway", sans-serif;
-              font-weight: 400;
-              line-height: 1.5;
-              color: #121212;
-              letter-spacing: 0.01rem;
-              margin: 0; }
-              .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__details .fundraiserDetailsBox__description .description__content p:not(:last-child) {
-                margin: 0 0 2rem; }
-    .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar {
-      width: calc(35% - 15px); }
-      .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donationDetails {
-        background-color: #ffffff;
-        border: 2px solid #ddd;
-        border-radius: 2rem;
-        margin-bottom: 1.5rem;
-        padding: 1.5rem;
-        text-align: center; }
-        .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donationDetails .donationDetails__circleBox {
-          width: 164px;
-          height: 133px;
-          cursor: default;
-          position: relative;
-          margin: 0 auto; }
-          .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donationDetails .donationDetails__circleBox .circleBox__raisedPercent {
-            fill: #8d8d8d;
-            font-family: "Raleway", sans-serif;
-            font-size: 2.8rem;
-            font-weight: 600; }
-          .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donationDetails .donationDetails__circleBox .circleBox__progressDays {
-            fill: #8d8d8d;
-            font-family: "Raleway", sans-serif;
-            font-size: 1.4rem;
-            font-weight: 300; }
-        .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donationDetails .donationDetails__content .totalDonation {
-          font-size: 1.8rem;
-          line-height: 1.2;
-          color: #000;
-          letter-spacing: -.05rem;
-          font-weight: 300;
-          margin-bottom: 1.5rem; }
-          .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donationDetails .donationDetails__content .totalDonation span {
-            color: #666;
-            font-weight: 600; }
-        .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donationDetails .donationDetails__content .totalDonors {
+        padding: 0 1.5rem; }
+        .dashboardContent__tabs ul li a {
           display: block;
-          font-size: 1.6rem;
+          color: #000;
+          font-size: 1.2rem;
           line-height: 1.2;
-          color: #8cc63e;
-          text-decoration: underline; }
-      .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donatebuttons {
-        text-align: center; }
-        .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donatebuttons .donatebuttons__heading {
-          font-family: "quikhand_regular";
-          font-weight: 400;
-          color: #666;
-          letter-spacing: .05rem;
-          font-size: 1.8rem;
-          line-height: 2.4rem;
-          margin-bottom: 0.8rem; }
-        .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donatebuttons .donatebuttons__btn {
-          cursor: pointer;
-          text-align: center;
-          text-decoration: none;
+          font-family: "Roboto", sans-serif;
           font-weight: 700;
-          font-size: 2rem;
-          line-height: 5.5rem;
-          color: #fff;
-          padding: 0 1.5rem;
-          border-radius: 3.3rem;
+          padding: 1.5rem;
+          border-bottom: 2px solid rgba(0, 0, 0, 0);
           text-transform: uppercase;
-          height: 5.5rem;
-          margin-bottom: 0.8rem;
-          text-decoration: none;
+          letter-spacing: 1px; }
+        .dashboardContent__tabs ul li.active a {
+          color: #21936a;
+          border-color: #21936a; }
+  .dashboardContent__content {
+    padding: 3rem 0;
+    background-color: #f5f5f5; }
+    .dashboardContent__content .dashboardContent__main {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      .dashboardContent__content .dashboardContent__main .dashboardContent__details {
+        width: calc(65% - 15px); }
+        @media (max-width: 1023px) {
+          .dashboardContent__content .dashboardContent__main .dashboardContent__details {
+            width: 100%; } }
+        .dashboardContent__content .dashboardContent__main .dashboardContent__details--fullWidth {
+          width: 100%; }
+        .dashboardContent__content .dashboardContent__main .dashboardContent__details .userDetailsBox {
+          padding: 4rem;
+          background-color: #fff;
+          box-shadow: 0 8px 15px -8px rgba(0, 0, 0, 0.1);
+          position: relative;
+          margin-bottom: 3rem;
+          border-radius: 1.5rem; }
+          @media (max-width: 767px) {
+            .dashboardContent__content .dashboardContent__main .dashboardContent__details .userDetailsBox {
+              padding: 2rem; } }
+          .dashboardContent__content .dashboardContent__main .dashboardContent__details .userDetailsBox__button {
+            position: absolute;
+            top: 2rem;
+            right: 4rem;
+            text-align: right; }
+            .dashboardContent__content .dashboardContent__main .dashboardContent__details .userDetailsBox__button .btn {
+              padding: 1.25rem 4.5rem;
+              border-radius: 2rem;
+              letter-spacing: .1rem;
+              font-family: "Raleway", sans-serif;
+              font-weight: 700; }
+              @media (max-width: 479px) {
+                .dashboardContent__content .dashboardContent__main .dashboardContent__details .userDetailsBox__button .btn {
+                  padding: 1rem 2rem;
+                  font-size: 1rem; } }
+            @media (max-width: 767px) {
+              .dashboardContent__content .dashboardContent__main .dashboardContent__details .userDetailsBox__button {
+                right: 2rem; } }
+          .dashboardContent__content .dashboardContent__main .dashboardContent__details .userDetailsBox__detailSet {
+            text-align: left;
+            margin-bottom: 1.5rem; }
+            @media (max-width: 767px) {
+              .dashboardContent__content .dashboardContent__main .dashboardContent__details .userDetailsBox__detailSet {
+                text-align: center; } }
+            .dashboardContent__content .dashboardContent__main .dashboardContent__details .userDetailsBox__detailSet:first-child {
+              margin-bottom: 3rem; }
+            .dashboardContent__content .dashboardContent__main .dashboardContent__details .userDetailsBox__detailSet .profilePic {
+              height: 10rem;
+              width: 10rem;
+              -webkit-border-radius: 50%;
+              -moz-border-radius: 50%;
+              -o-object-fit: cover;
+              object-fit: cover;
+              border-radius: 50%; }
+            .dashboardContent__content .dashboardContent__main .dashboardContent__details .userDetailsBox__detailSet .userDetailsBox__label {
+              font-family: "Raleway", sans-serif;
+              font-weight: 300;
+              color: #999;
+              text-transform: capitalize;
+              font-size: 1.8rem;
+              line-height: 24px;
+              letter-spacing: -.5px; }
+            .dashboardContent__content .dashboardContent__main .dashboardContent__details .userDetailsBox__detailSet .userDetailsBox__value {
+              font-weight: 300;
+              padding-bottom: 2px;
+              overflow: hidden;
+              -o-text-overflow: ellipsis;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              font-size: 2.4rem;
+              line-height: 1.2;
+              color: #000;
+              letter-spacing: -.5px; }
+        .dashboardContent__content .dashboardContent__main .dashboardContent__details .profileStatsBox {
           display: flex;
           align-items: center;
-          justify-content: center; }
-          .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donatebuttons .donatebuttons__btn.btn-donation {
-            background: #ff8502;
-            border: 1px solid #ff8502; }
-          .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donatebuttons .donatebuttons__btn.btn-facebook {
-            background-color: #4c69ba;
-            border-color: #4c69ba; }
-            .fundraiserDetails__main .fundraiserDetails__content .fundraiserDetails__sidebar .sidebarBox__donatebuttons .donatebuttons__btn.btn-facebook span {
+          justify-content: space-between;
+          padding: 4rem;
+          background-color: #fff;
+          box-shadow: 0 8px 15px -8px rgba(0, 0, 0, 0.1);
+          position: relative;
+          margin-bottom: 3rem;
+          border-radius: 1.5rem; }
+          @media (max-width: 1023px) {
+            .dashboardContent__content .dashboardContent__main .dashboardContent__details .profileStatsBox {
+              flex-direction: column;
+              align-items: flex-start; } }
+          @media (max-width: 767px) {
+            .dashboardContent__content .dashboardContent__main .dashboardContent__details .profileStatsBox {
+              padding: 2rem; } }
+          .dashboardContent__content .dashboardContent__main .dashboardContent__details .profileStatsBox__box {
+            display: flex;
+            align-items: center;
+            text-align: left; }
+            @media (max-width: 1023px) {
+              .dashboardContent__content .dashboardContent__main .dashboardContent__details .profileStatsBox__box {
+                width: 100%;
+                margin-bottom: 2rem; } }
+            .dashboardContent__content .dashboardContent__main .dashboardContent__details .profileStatsBox__box .profileStatsBox__infoIcon {
+              height: 60px;
+              width: 60px;
+              -webkit-border-radius: 50%;
+              -moz-border-radius: 50%;
+              border-radius: 50%;
+              margin-right: 2rem;
+              font-size: 2rem;
+              display: flex;
+              align-items: center;
+              justify-content: center; }
+            .dashboardContent__content .dashboardContent__main .dashboardContent__details .profileStatsBox__box .profileStatsBox__infoContent .profileStatsBox__infoValue h2 {
+              color: #000;
+              letter-spacing: -.5px;
+              font-weight: 300;
+              font-size: 3rem;
+              line-height: 1.2;
+              margin: 0; }
+            .dashboardContent__content .dashboardContent__main .dashboardContent__details .profileStatsBox__box .profileStatsBox__infoContent .profileStatsBox__infoLabel {
+              color: #999;
+              letter-spacing: -.5px;
+              font-size: 1.8rem;
+              line-height: 24px;
+              font-weight: 400;
+              margin: 0; }
+        .dashboardContent__content .dashboardContent__main .dashboardContent__details .knowYourCustomerBox {
+          padding: 4rem;
+          background-color: #fff;
+          box-shadow: 0 8px 15px -8px rgba(0, 0, 0, 0.1);
+          position: relative;
+          margin-bottom: 3rem;
+          border-radius: 1.5rem; }
+          @media (max-width: 767px) {
+            .dashboardContent__content .dashboardContent__main .dashboardContent__details .knowYourCustomerBox {
+              padding: 2rem; } }
+          .dashboardContent__content .dashboardContent__main .dashboardContent__details .knowYourCustomerBox input.form-control {
+            background: #f7f7f7;
+            padding: 1.35rem 2rem;
+            border: none;
+            outline: none;
+            font-size: 1.8rem;
+            box-shadow: none;
+            color: #000;
+            transition: all .3s;
+            border-radius: 3rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            text-align: center;
+            height: 100%; }
+          .dashboardContent__content .dashboardContent__main .dashboardContent__details .knowYourCustomerBox input.btn-primary {
+            border-radius: 3rem; }
+            @media (max-width: 1023px) {
+              .dashboardContent__content .dashboardContent__main .dashboardContent__details .knowYourCustomerBox input.btn-primary {
+                margin-top: 2rem; } }
+        .dashboardContent__content .dashboardContent__main .dashboardContent__details .socialLinksBox {
+          padding: 4rem;
+          background-color: #fff;
+          box-shadow: 0 8px 15px -8px rgba(0, 0, 0, 0.1);
+          position: relative;
+          margin-bottom: 3rem;
+          border-radius: 1.5rem;
+          display: flex;
+          flex-wrap: wrap; }
+          @media (max-width: 767px) {
+            .dashboardContent__content .dashboardContent__main .dashboardContent__details .socialLinksBox {
+              padding: 2rem; } }
+          .dashboardContent__content .dashboardContent__main .dashboardContent__details .socialLinksBox button {
+            box-shadow: inset 4px 4px 5px rgba(0, 0, 0, 0.2);
+            color: #fff;
+            margin: 1rem;
+            flex-grow: 1;
+            flex-shrink: 0;
+            text-transform: capitalize;
+            font-weight: 400;
+            letter-spacing: unset;
+            font-size: 1.8rem;
+            border-radius: 3rem; }
+            .dashboardContent__content .dashboardContent__main .dashboardContent__details .socialLinksBox button.btn-facebook {
+              background: #3b5999; }
+              .dashboardContent__content .dashboardContent__main .dashboardContent__details .socialLinksBox button.btn-facebook:hover {
+                background: #35508a; }
+            .dashboardContent__content .dashboardContent__main .dashboardContent__details .socialLinksBox button.btn-linkedin {
+              background: #0077b5; }
+              .dashboardContent__content .dashboardContent__main .dashboardContent__details .socialLinksBox button.btn-linkedin:hover {
+                background: #006aa1; }
+            .dashboardContent__content .dashboardContent__main .dashboardContent__details .socialLinksBox button i {
               margin-right: 1rem; }
+        .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox {
+          background-color: #fff;
+          box-shadow: 0 8px 15px -8px rgba(0, 0, 0, 0.1);
+          position: relative;
+          border-radius: 1.5rem;
+          margin-bottom: 3rem; }
+          .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__top {
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap; }
+            .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__top .myFundingsBox__campaignDetails {
+              width: 66.66666667%;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              flex-wrap: wrap; }
+              @media (max-width: 1023px) {
+                .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__top .myFundingsBox__campaignDetails {
+                  width: 100%;
+                  margin-bottom: 2rem; } }
+              .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__top .myFundingsBox__campaignDetails .myFundingsBox__imgWrapper {
+                width: 150px;
+                height: 100px;
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                background: #f7f7f7;
+                margin: auto; }
+                @media (max-width: 767px) {
+                  .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__top .myFundingsBox__campaignDetails .myFundingsBox__imgWrapper {
+                    margin-bottom: 2rem; } }
+                .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__top .myFundingsBox__campaignDetails .myFundingsBox__imgWrapper img {
+                  height: 100%;
+                  width: 100%;
+                  object-fit: cover; }
+              .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__top .myFundingsBox__campaignDetails .myFundingsBox__mediaBody {
+                margin-left: 1rem;
+                text-align: left;
+                align-self: center;
+                flex: 1; }
+                @media (max-width: 767px) {
+                  .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__top .myFundingsBox__campaignDetails .myFundingsBox__mediaBody {
+                    width: 100%;
+                    margin-left: 0;
+                    flex: auto;
+                    text-align: center; } }
+                .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__top .myFundingsBox__campaignDetails .myFundingsBox__mediaBody h4 {
+                  font-size: 2.4rem;
+                  color: #000;
+                  letter-spacing: -.5px;
+                  font-weight: 300;
+                  line-height: 1.2;
+                  margin: 0; }
+                .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__top .myFundingsBox__campaignDetails .myFundingsBox__mediaBody .myFundingsBox__beneficiary {
+                  font-size: 1.8rem;
+                  font-weight: 400;
+                  color: #666;
+                  text-transform: capitalize;
+                  margin: 0; }
+                .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__top .myFundingsBox__campaignDetails .myFundingsBox__mediaBody .myFundingsBox__extra {
+                  display: flex;
+                  align-items: center;
+                  flex-wrap: wrap;
+                  text-transform: capitalize; }
+                  @media (max-width: 767px) {
+                    .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__top .myFundingsBox__campaignDetails .myFundingsBox__mediaBody .myFundingsBox__extra {
+                      justify-content: center; } }
+                  .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__top .myFundingsBox__campaignDetails .myFundingsBox__mediaBody .myFundingsBox__extra .myFundingsBox__extraItem {
+                    margin: 0 .5rem;
+                    display: flex;
+                    align-items: center; }
+                    .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__top .myFundingsBox__campaignDetails .myFundingsBox__mediaBody .myFundingsBox__extra .myFundingsBox__extraItem .myFundingsBox__donorAvatars {
+                      margin-right: .5rem;
+                      display: flex;
+                      align-items: center; }
+                      .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__top .myFundingsBox__campaignDetails .myFundingsBox__mediaBody .myFundingsBox__extra .myFundingsBox__extraItem .myFundingsBox__donorAvatars .avatar {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        margin-right: -1.5rem;
+                        border: 2px solid #fff;
+                        overflow: hidden;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center; }
+                        .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__top .myFundingsBox__campaignDetails .myFundingsBox__mediaBody .myFundingsBox__extra .myFundingsBox__extraItem .myFundingsBox__donorAvatars .avatar:last-child {
+                          margin-right: 0; }
+                        .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__top .myFundingsBox__campaignDetails .myFundingsBox__mediaBody .myFundingsBox__extra .myFundingsBox__extraItem .myFundingsBox__donorAvatars .avatar img {
+                          height: 28px;
+                          width: 28px;
+                          object-fit: cover; }
+                    .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__top .myFundingsBox__campaignDetails .myFundingsBox__mediaBody .myFundingsBox__extra .myFundingsBox__extraItem .myFundingsBox__donorNumber {
+                      color: #999;
+                      font-weight: 300;
+                      font-size: 1.8rem; }
+                    .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__top .myFundingsBox__campaignDetails .myFundingsBox__mediaBody .myFundingsBox__extra .myFundingsBox__extraItem.text--processing * {
+                      color: #f9cf1c; }
+                    .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__top .myFundingsBox__campaignDetails .myFundingsBox__mediaBody .myFundingsBox__extra .myFundingsBox__extraItem.text--processing:before {
+                      content: "\2022";
+                      font-weight: 700;
+                      display: inline-block;
+                      margin-right: 1rem;
+                      color: #999; }
+                    .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__top .myFundingsBox__campaignDetails .myFundingsBox__mediaBody .myFundingsBox__extra .myFundingsBox__extraItem.text--processing p {
+                      font-size: 1.8rem;
+                      margin: 0;
+                      font-weight: 300; }
+            .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__top .myFundingsBox__fundraiserControls {
+              width: 33.33333333%;
+              display: grid;
+              grid-gap: 1rem;
+              grid-template-columns: 1fr 1fr;
+              grid-template-areas: "manage edit" "withdraw withdraw"; }
+              @media (max-width: 1023px) {
+                .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__top .myFundingsBox__fundraiserControls {
+                  width: 50%;
+                  margin: 0 auto; } }
+              @media (max-width: 767px) {
+                .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__top .myFundingsBox__fundraiserControls {
+                  width: 100%; } }
+              .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__top .myFundingsBox__fundraiserControls .btn-primary {
+                box-shadow: 0 2px 5px rgba(33, 147, 106, 0.5);
+                border-radius: 3rem; }
+                .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__top .myFundingsBox__fundraiserControls .btn-primary.manage {
+                  grid-area: manage; }
+                .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__top .myFundingsBox__fundraiserControls .btn-primary.edit {
+                  grid-area: edit; }
+                .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__top .myFundingsBox__fundraiserControls .btn-primary.withdraw {
+                  grid-area: withdraw; }
+          .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__bottom {
+            border-top: 2px solid #ebebeb;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap; }
+            .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__bottom .myFundingsDetailsBox {
+              text-align: center; }
+              @media (max-width: 767px) {
+                .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__bottom .myFundingsDetailsBox {
+                  width: 50%;
+                  margin-bottom: 2rem; } }
+              @media (max-width: 479px) {
+                .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__bottom .myFundingsDetailsBox {
+                  width: 100%; } }
+              .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__bottom .myFundingsDetailsBox__value {
+                margin-bottom: 1rem;
+                font-size: 3.6rem;
+                color: #000;
+                letter-spacing: -.5px;
+                font-weight: 300;
+                line-height: 1.2;
+                margin: 0; }
+              .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__bottom .myFundingsDetailsBox__param {
+                color: #999;
+                text-transform: capitalize;
+                display: flex;
+                align-items: center;
+                justify-content: center; }
+                .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__bottom .myFundingsDetailsBox__param i {
+                  font-size: 1.8rem;
+                  margin-right: .5rem; }
+                .dashboardContent__content .dashboardContent__main .dashboardContent__details .myFundingsBox__bottom .myFundingsDetailsBox__param span {
+                  display: inline-block;
+                  font-size: 1.8rem;
+                  font-weight: 400;
+                  line-height: 1.8rem; }
+        .dashboardContent__content .dashboardContent__main .dashboardContent__details .usersdonations {
+          width: 75%;
+          margin: 0 auto;
+          background: -webkit-gradient(linear, left top, right bottom, from(#a5ebdd), to(#cff6af));
+          background: -webkit-linear-gradient(top left, #a5ebdd, #cff6af);
+          background: -moz-linear-gradient(top left, #a5ebdd, #cff6af);
+          background: -o-linear-gradient(top left, #a5ebdd, #cff6af);
+          background: linear-gradient(to bottom right, #a5ebdd, #cff6af);
+          border-radius: 1.5rem;
+          box-shadow: 0 6px 40px rgba(0, 0, 0, 0.1);
+          padding: 3rem;
+          text-align: center; }
+          @media (max-width: 767px) {
+            .dashboardContent__content .dashboardContent__main .dashboardContent__details .usersdonations {
+              padding: 2rem;
+              width: 100%; } }
+          .dashboardContent__content .dashboardContent__main .dashboardContent__details .usersdonations img {
+            width: 200px; }
+            @media (max-width: 767px) {
+              .dashboardContent__content .dashboardContent__main .dashboardContent__details .usersdonations img {
+                width: 50%; } }
+          .dashboardContent__content .dashboardContent__main .dashboardContent__details .usersdonations h2 {
+            margin: 1.5rem 0;
+            font-size: 3rem;
+            color: #000;
+            letter-spacing: -.5px;
+            font-weight: 300;
+            line-height: 1.2; }
+          .dashboardContent__content .dashboardContent__main .dashboardContent__details .usersdonations .btn-primary {
+            background: #21936a;
+            color: #fff;
+            -webkit-box-shadow: 0 2px 5px rgba(33, 147, 106, 0.5);
+            -moz-box-shadow: 0 2px 5px rgba(33, 147, 106, 0.5);
+            box-shadow: 0 2px 5px rgba(33, 147, 106, 0.5);
+            border-radius: 3rem; }
+        .dashboardContent__content .dashboardContent__main .dashboardContent__details .referFormBox {
+          width: 66.66666667%;
+          margin: 0 auto;
+          padding: 4rem;
+          background-color: #fff;
+          box-shadow: 0 8px 15px -8px rgba(0, 0, 0, 0.1);
+          position: relative;
+          margin-bottom: 3rem;
+          border-radius: 1.5rem;
+          text-align: center; }
+          @media (max-width: 767px) {
+            .dashboardContent__content .dashboardContent__main .dashboardContent__details .referFormBox {
+              width: 100%;
+              padding: 2rem; } }
+          .dashboardContent__content .dashboardContent__main .dashboardContent__details .referFormBox h3 {
+            display: block;
+            font-weight: 500;
+            color: #21936a;
+            margin-bottom: 3rem;
+            font-size: 2.6rem;
+            letter-spacing: -.5px;
+            line-height: 1.2; }
+          .dashboardContent__content .dashboardContent__main .dashboardContent__details .referFormBox__form {
+            width: 75%;
+            margin: 0 auto 3rem; }
+            .dashboardContent__content .dashboardContent__main .dashboardContent__details .referFormBox__form .form-group {
+              margin: 0 0 3rem; }
+            @media (max-width: 1023px) {
+              .dashboardContent__content .dashboardContent__main .dashboardContent__details .referFormBox__form {
+                width: 100%;
+                margin: 0 0 2rem; } }
+          .dashboardContent__content .dashboardContent__main .dashboardContent__details .referFormBox__bottom {
+            text-align: center; }
+            .dashboardContent__content .dashboardContent__main .dashboardContent__details .referFormBox__bottom p {
+              margin: 0 0 2rem; }
+            .dashboardContent__content .dashboardContent__main .dashboardContent__details .referFormBox__bottom span {
+              display: inline-block;
+              font-size: 14px;
+              line-height: 1.2; }
+              .dashboardContent__content .dashboardContent__main .dashboardContent__details .referFormBox__bottom span.text-muted {
+                color: #6c757d; }
+      .dashboardContent__content .dashboardContent__main .dashboardContent__sidebar {
+        width: calc(35% - 15px); }
+        @media (max-width: 1023px) {
+          .dashboardContent__content .dashboardContent__main .dashboardContent__sidebar {
+            width: 100%; } }
+        .dashboardContent__content .dashboardContent__main .dashboardContent__sidebar .sidebarBox__checklist {
+          padding: 0;
+          background-color: #fff;
+          box-shadow: 0 8px 15px -8px rgba(0, 0, 0, 0.1);
+          position: relative;
+          margin-bottom: 3rem;
+          border-radius: 1.5rem; }
+          .dashboardContent__content .dashboardContent__main .dashboardContent__sidebar .sidebarBox__checklist .checklist__header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5rem 2rem;
+            border-bottom: 2px solid #ebebeb; }
+            .dashboardContent__content .dashboardContent__main .dashboardContent__sidebar .sidebarBox__checklist .checklist__header .checklist__progress {
+              margin-right: 1.5rem;
+              width: 100%; }
+              .dashboardContent__content .dashboardContent__main .dashboardContent__sidebar .sidebarBox__checklist .checklist__header .checklist__progress .progress-bar {
+                background-color: #21936a;
+                background-size: 3.2rem 3.2rem; }
+            .dashboardContent__content .dashboardContent__main .dashboardContent__sidebar .sidebarBox__checklist .checklist__header .checklist__label {
+              font-weight: 500;
+              font-size: 2.4rem;
+              color: #000;
+              letter-spacing: -.5px;
+              margin: 0; }
+          .dashboardContent__content .dashboardContent__main .dashboardContent__sidebar .sidebarBox__checklist .checklist__body {
+            display: flex;
+            flex-direction: column; }
+            .dashboardContent__content .dashboardContent__main .dashboardContent__sidebar .sidebarBox__checklist .checklist__body .checklist__strength {
+              width: 100%;
+              padding: 2rem 1rem;
+              border-bottom: 2px solid #ebebeb;
+              text-align: center; }
+              .dashboardContent__content .dashboardContent__main .dashboardContent__sidebar .sidebarBox__checklist .checklist__body .checklist__strength h6 {
+                font-weight: 700;
+                letter-spacing: 1px;
+                font-size: 1.6rem;
+                color: #000;
+                margin: 0;
+                text-transform: uppercase; }
+            .dashboardContent__content .dashboardContent__main .dashboardContent__sidebar .sidebarBox__checklist .checklist__body .checklist__listGroup {
+              margin: 0;
+              width: 100%;
+              text-align: left;
+              display: flex;
+              flex-direction: column;
+              padding-left: 0; }
+              .dashboardContent__content .dashboardContent__main .dashboardContent__sidebar .sidebarBox__checklist .checklist__body .checklist__listGroup .checklist__listItem {
+                display: flex;
+                position: relative;
+                margin-bottom: -1px;
+                background-color: #fff; }
+                .dashboardContent__content .dashboardContent__main .dashboardContent__sidebar .sidebarBox__checklist .checklist__body .checklist__listGroup .checklist__listItem:not(:first-child) {
+                  border-top: 2px solid #ebebeb; }
+                .dashboardContent__content .dashboardContent__main .dashboardContent__sidebar .sidebarBox__checklist .checklist__body .checklist__listGroup .checklist__listItem .checklist__listTodo {
+                  padding: 1rem 2.5rem;
+                  flex-grow: 1;
+                  color: #000;
+                  display: flex;
+                  align-items: center; }
+                  .dashboardContent__content .dashboardContent__main .dashboardContent__sidebar .sidebarBox__checklist .checklist__body .checklist__listGroup .checklist__listItem .checklist__listTodo h5 {
+                    font-size: 1.8rem;
+                    line-height: 24px;
+                    font-weight: 400;
+                    color: #000;
+                    letter-spacing: -.5px;
+                    margin: 0; }
+                .dashboardContent__content .dashboardContent__main .dashboardContent__sidebar .sidebarBox__checklist .checklist__body .checklist__listGroup .checklist__listItem .checklist__listStatus {
+                  padding: 2rem;
+                  border-left: 2px solid #ebebeb;
+                  display: flex;
+                  align-items: center; }
+                  .dashboardContent__content .dashboardContent__main .dashboardContent__sidebar .sidebarBox__checklist .checklist__body .checklist__listGroup .checklist__listItem .checklist__listStatus i.text--primary {
+                    color: #21936a !important; }
+                  .dashboardContent__content .dashboardContent__main .dashboardContent__sidebar .sidebarBox__checklist .checklist__body .checklist__listGroup .checklist__listItem .checklist__listStatus i.text--disabled {
+                    color: #eee !important; }
 
 /*# sourceMappingURL=style.min.css.map */

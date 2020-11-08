@@ -7,6 +7,14 @@
     text-align: center;
     position: relative;
 
+    @media (max-width: $desktopSmall - 1) {
+        padding-top: 80px;
+    }
+
+    @media (max-width: $mobileBig) {
+        padding-top: 84px;
+    }
+
     h3 {
         font-size: 5rem;
         font-family: $secondary_font;
@@ -25,7 +33,12 @@
         }
 
         @media (max-width: $mobileBig) {
-            font-size: 4.5rem;
+            font-size: 3.5rem;
+            margin: 0 0 2rem;
+
+            span {
+                font-size: 4.5rem;
+            }
         }
     }
 
@@ -39,8 +52,14 @@
         ul {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
 
             margin: 0;
+
+            @media (max-width: $mobile - 1) {
+                flex-direction: column;
+                align-items: center;
+            }
 
             li {
                 list-style: none;
@@ -76,11 +95,14 @@
 
     &__sidebar {
         background: #fff;
-        width: 96%;
         padding: 1rem .1rem;
         border-radius: 1rem;
         box-shadow: .1rem .1rem 1.6rem .2rem #ebebeb;
         z-index: 1;
+
+        @media (max-width: $desktopSmall - 1) {
+            margin-bottom: 4rem;
+        }
 
         .sidebarMenu {
             $this: ".sidebarMenu";
@@ -202,6 +224,32 @@
 
             &:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)) {
                 margin-top: 2.1rem;
+            }
+
+            @media (max-width: $mobileBig) {
+                width: calc((100% / 2) - 1rem);
+                margin-right: 2rem;
+
+                &:nth-child(3n+3) {
+                    margin-right: 2rem;
+                }
+
+                &:nth-child(2n+2) {
+                    margin-right: 0;
+                }
+
+                &:not(:nth-child(1)):not(:nth-child(2)) {
+                    margin-top: 2.1rem;
+                }
+            }
+
+            @media (max-width: $mobile - 1) {
+                width: 100%;
+                margin-right: 0 !important;
+
+                &:not(:nth-child(1)) {
+                    margin-top: 2.1rem;
+                }
             }
 
             &__badgeBoxes {
@@ -363,6 +411,10 @@
                         letter-spacing: 0.01rem;
                         padding: 1rem 3rem;
                         width: 100%;
+
+                        @media (max-width: $mobileBig) {
+                            padding: 1rem 2rem;
+                        }
                     }
                 }
 

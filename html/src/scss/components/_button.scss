@@ -7,7 +7,7 @@
 	padding: 15px 30px;
 	text-transform: uppercase;
 	@include css3BoxShadow(none);
-	@include css3BorderRadius(0);
+	@include css3BorderRadius(3rem);
 	@include css3Transition(400ms);
 	
 	// Font Families

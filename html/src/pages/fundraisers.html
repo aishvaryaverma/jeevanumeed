@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./layouts/_head.html', {
+        "title": "Fundraiser Details",
+        "description": ""
+    })
+</head>
+<body class="innerPage">
+    <main class="wrapper" role="main">
+        @@include('./layouts/_header.html')
+        
+        <div class="dashboardContent">
+            @@include('./layouts/_headerInner.html', {
+                activeFundraisers: "active"
+            })
+
+            <section class="dashboardContent__content">
+                <div class="container">
+                    <div class="dashboardContent__main">
+                        <div class="dashboardContent__details dashboardContent__details--fullWidth">
+                            <div class="myFundingsBox">
+                                <div class="myFundingsBox__top">
+                                    <div class="myFundingsBox__campaignDetails">
+                                        <div class="myFundingsBox__imgWrapper">
+                                            <img src="https://www.impactguru.com/fundraiser_images/9ddf57b2-af16-487c-ac25-682a199b9c7e" alt="Campaign Cover">
+                                        </div>
+                                        <div class="myFundingsBox__mediaBody">
+                                            <h4>Help charanjeet raise funds to fight blood cancer to fight blood cancer</h4>
+                                            <div class="myFundingsBox__beneficiary">For charanjeet</div>
+                                            <div class="myFundingsBox__extra">
+                                                <div class="myFundingsBox__extraItem">
+                                                    <div class="myFundingsBox__donorAvatars">
+                                                        <div class="avatar"><img src="https://image.flaticon.com/icons/svg/190/190591.svg" alt="donor avatar"></div>
+                                                        <div class="avatar"><img src="https://image.flaticon.com/icons/svg/190/190600.svg" alt="donor avatar"></div>
+                                                        <div class="avatar"><img src="https://image.flaticon.com/icons/svg/190/190607.svg" alt="donor avatar"></div>
+                                                    </div>
+                                                    <div class="myFundingsBox__donorNumber">0 donors</div>
+                                                </div>
+                                                <div class="myFundingsBox__extraItem text--processing">
+                                                    <p>created, unapproved <i class="fas fa-info-circle"></i></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="myFundingsBox__fundraiserControls">
+                                        <a class="btn btn-primary manage" href="#">manage</a>
+                                        <a class="btn btn-primary edit" href="#">edit</a>
+                                        <a class="btn btn-primary withdraw" href="#">withdraw funds</a>
+                                    </div>
+                                </div>
+                                <div class="myFundingsBox__bottom">
+                                    <div class="myFundingsDetailsBox">
+                                        <h1 class="myFundingsDetailsBox__value">₹0</h1>
+                                        <div class="myFundingsDetailsBox__param">
+                                            <i class="fas fa-money-bill-wave"></i>
+                                            <span>fund raised</span>
+                                        </div>
+                                    </div>
+                                    <div class="myFundingsDetailsBox">
+                                        <h1 class="myFundingsDetailsBox__value">0</h1>
+                                        <div class="myFundingsDetailsBox__param">
+                                            <i class="fas fa-eye"></i>
+                                            <span>views</span>
+                                        </div>
+                                    </div>
+                                    <div class="myFundingsDetailsBox">
+                                        <h1 class="myFundingsDetailsBox__value">1 Nov 2020</h1>
+                                        <div class="myFundingsDetailsBox__param">
+                                            <i class="far fa-calendar-alt"></i>
+                                            <span>fundraiser start date</span>
+                                        </div>
+                                    </div>
+                                    <div class="myFundingsDetailsBox">
+                                        <h1 class="myFundingsDetailsBox__value">84</h1>
+                                        <div class="myFundingsDetailsBox__param">
+                                            <i class="far fa-calendar-minus"></i>
+                                            <span>days to go</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        @@include('./layouts/_footer.html')
+    </main>
+    
+    @@include('./layouts/_scripts.html')
+</body>
+</html>

@@ -3,6 +3,10 @@
     z-index: 1;
     padding: 8rem 0;
     background-color: #dbdfdf;
+
+    @media (max-width: $desktop - 1) {
+        padding: 4rem 0;
+    }
     
     &__content {
         display: flex;
@@ -14,6 +18,18 @@
             display: flex;
             flex-direction: column;
 
+            @media (max-width: $desktop - 1) {
+                width: 75%;
+
+                &--first {
+                    margin-bottom: 3rem;
+                }
+            }
+
+            @media (max-width: $mobileBig) {
+                width: 100%;
+            }
+
             h3 {
                 font-size: 5rem;
                 font-family: $secondary_font;
@@ -22,6 +38,10 @@
                 color: #343434;
                 letter-spacing: -0.005rem;
                 margin: 0 0 2rem;
+
+                @media (max-width: $mobile - 1) {
+                    font-size: 3.5rem;
+                }
             }
 
             form {
@@ -40,6 +60,7 @@
                         border: none;
                         border-radius: 0;
                         padding: 15px;
+                        height: 100%;
 
                         &::-webkit-input-placeholder {
                             font-size: 1.5rem;
@@ -83,10 +104,9 @@
                     }
 
                     .btn-secondary {
-                        background-image: url(../img/mainfooter/submitbtn-icon.png);
-                        background-position: center center;
-                        background-repeat: no-repeat;
-                        background-size: 21px 15px;
+                        background: $secondary_color url(../img/mainfooter/submitbtn-icon.png) no-repeat center center / 21px 15px;
+                        border-radius: 0;
+                        width: 67px;
                     }
                 }
             }
@@ -99,6 +119,10 @@
                 letter-spacing: 0.01rem;
                 color: $secondary_color;
                 margin: 0 0 2rem;
+
+                @media (max-width: $mobile - 1) {
+                    font-size: 3rem;
+                }
             }
 
             &_menuLinks {
@@ -109,12 +133,15 @@
                 margin: 0 0 3rem;
 
                 @media (max-width: $desktopSmall - 1) {
-                    flex-direction: column;
                     flex-wrap: wrap;
                     margin-bottom: 0;
                 }
+                
+                @media (max-width: $mobileBig) {
+                    justify-content: center;
+                }
 
-                >li {
+                > li {
                     position: relative;
                     display: flex;
                     align-items: center;
@@ -130,6 +157,23 @@
                         margin-right: 0;
                     }
 
+                    @media (max-width: $mobileBig) {
+                        border-right: none;
+                        margin-right: 0;
+
+                        margin-bottom: 2.5rem;
+                        padding: 0 2rem;
+
+                        &:last-child {
+                            padding-right: 2rem;
+                        }
+                    }
+
+                    @media (max-width: $mobile - 1) {
+                        margin-bottom: 1.5rem;
+                        padding: 0 1rem;
+                    }
+
                     >a {
                         display: block;
                         font-family: $secondary_font;
@@ -142,8 +186,12 @@
                         text-transform: uppercase;
 
                         @media (max-width: $desktopSmall - 1) {
-                            padding: 2.5rem;
+                            padding: 1.5rem;
                             width: 100%;
+                        }
+
+                        @media (max-width: $mobileBig) {
+                            padding: 0;
                         }
 
                         &:hover {
@@ -159,6 +207,14 @@
                 justify-content: flex-end;
 
                 padding-right: 4rem;
+
+                @media (max-width: $desktop - 1) {
+                    padding-right: 0;
+                }
+
+                @media (max-width: $mobileBig) {
+                    justify-content: center;
+                }
 
                 li {
                     display: inline-block;
@@ -181,16 +237,20 @@
                                 color: $secondary_color;
                             }
                         }
+
+                        @media (max-width: $mobileBig) {
+                            margin: 0 1rem;
+                        }
                     }
                 }
             }
         }
 
-        @media (max-width: $desktop - 1) {}
-
-        @media (max-width: $desktopSmall - 1) {
+        @media (max-width: $desktop - 1) {
             flex-direction: column;
         }
+
+        @media (max-width: $desktopSmall - 1) {}
     }
 }
 

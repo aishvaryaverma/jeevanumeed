@@ -9,6 +9,11 @@
 	transition: all 0.25s ease-out;
 	background-color: rgba(#000000, 0.52);
 
+	@media (max-width: $desktopSmall - 1) {
+		background-color: $secondary_color;
+		border-bottom: .1rem solid #fff;
+	}
+
 	.container {
 		display: flex;
 		align-items: center;
@@ -16,16 +21,6 @@
 		transition: height 0.25s ease-out;
 
 		position: relative;
-
-		@media (max-width: $desktopSmall - 1) {
-			padding-top: 2rem;
-			padding-bottom: 2rem;
-		}
-
-		@media (max-width: $mobileBig - 1) {
-			padding-top: 1.5rem;
-			padding-bottom: 1.5rem;
-		}
 	}
 
 	&__logo {
@@ -35,12 +30,8 @@
 		width: 15rem;
 		padding: .75rem 0;
 
-		@media (max-width: $desktopSmall - 1) {
-			width: 8.5rem;
-		}
-
-		@media (max-width: $mobile) {
-			width: 6.5rem;
+		@media (max-width: $mobileBig) {
+			padding: 1rem 0;
 		}
 
 		a {
@@ -57,10 +48,11 @@
 
 		@media (max-width: $desktopSmall - 1) {
 			position: absolute;
-			top: 100%;
+			top: calc(100% + 1px);
 			right: 0;
 			width: 100%;
-			background-color: #05164e;
+			background-color: $secondary_color;
+			transition: all 0.5s ease;
 			transform-origin: 0 0 0;
 			opacity: 0;
 			visibility: hidden;
@@ -85,6 +77,7 @@
 				flex-direction: column;
 				flex-wrap: wrap;
 				margin-bottom: 0;
+				align-items: normal;
 			}
 
 			> li {
@@ -102,6 +95,18 @@
 					padding-right: 0;
 					border-right: none;
 					margin-right: 0;
+				}
+
+				@media (max-width: $desktop - 1) {
+					padding-right: 1.5rem;
+					margin-right: 1.5rem;
+				}
+
+				@media (max-width: $desktopSmall - 1) {
+					padding-right: 0;
+					border-right: none;
+					margin-right: 0;
+					border-bottom: .1rem solid #fff;
 				}
 
 				>a {
@@ -127,7 +132,10 @@
 
 				&.donate-btn {
 					padding-left: 2.5rem;
-					padding-right: 4.4rem;
+
+					@media (max-width: $desktopSmall - 1) {
+						padding: 2.5rem;
+					}
 
 					a {
 						background: rgb(174, 226, 103);

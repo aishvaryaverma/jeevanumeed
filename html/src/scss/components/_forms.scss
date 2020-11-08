@@ -278,17 +278,63 @@ label.error {
 
 // Modified: Bootstrap Default From style
 .form-control {
+	border: none;
+	border-radius: 0;
+	padding: 0 0 1rem;
+	border-bottom: .1rem solid rgba(#8b8b8b, 0.82);
+
+	font-size: 1.6rem;
 	font-family: $secondary_font;
-	font-size: 15px;
-	height: auto;
-	padding: 10px;
-	color: $heading_color;
-	@include css3BorderRadius(0);
-	@include css3BoxShadow(none !important);
+	font-weight: 300;
+	line-height: 1.2;
+	letter-spacing: 0.01rem;
+	color: $black_color;
+	outline: none !important;
+	box-shadow: none !important;
+
+	&::-webkit-input-placeholder {
+		font-size: 1.6rem;
+		font-family: $secondary_font;
+		font-weight: 300;
+		line-height: 1.2;
+		letter-spacing: 0.01rem;
+		color: $black_color;
+	}
+
+	&::-moz-placeholder {
+		font-size: 1.6rem;
+		font-family: $secondary_font;
+		font-weight: 300;
+		line-height: 1.2;
+		letter-spacing: 0.01rem;
+		color: $black_color;
+	}
+
+	&:-ms-input-placeholder {
+		font-size: 1.6rem;
+		font-family: $secondary_font;
+		font-weight: 300;
+		line-height: 1.2;
+		letter-spacing: 0.01rem;
+		color: $black_color;
+	}
+
+	&:-moz-placeholder {
+		font-size: 1.6rem;
+		font-family: $secondary_font;
+		font-weight: 300;
+		line-height: 1.2;
+		letter-spacing: 0.01rem;
+		color: $black_color;
+	}
 
 	&.smPadding {
 		font-size: 14px;
 		padding: 4px;
+	}
+
+	&:focus {
+		border-color: $primary_color;
 	}
 }
 
