@@ -6808,13 +6808,16 @@ select.form-control.customDropdownIcon {
       width: 100%;
       position: relative; } }
   .mainBanner__img img {
-    width: auto;
-    height: 100%;
-    max-width: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+    width: 100%; }
+    @media (max-width: 767px) {
+      .mainBanner__img img {
+        width: auto;
+        height: 100%;
+        max-width: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); } }
   .mainBanner__content {
     position: absolute;
     top: 50%;
