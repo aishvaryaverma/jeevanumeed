@@ -6729,7 +6729,7 @@ select.form-control.customDropdownIcon {
             color: #101113;
             letter-spacing: 0.022rem;
             position: relative;
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             line-height: 1.2;
             text-transform: uppercase; }
             @media (max-width: 1023px) {
@@ -6745,7 +6745,7 @@ select.form-control.customDropdownIcon {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        padding-right: 4rem; }
+        padding-right: 0; }
         @media (max-width: 1279px) {
           .mainFooter__content .item_socialLinks {
             padding-right: 0; } }

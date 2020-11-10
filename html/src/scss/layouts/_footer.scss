@@ -181,7 +181,7 @@
                         color: #101113;
                         letter-spacing: 0.022rem;
                         position: relative;
-                        font-size: 1.6rem;
+                        font-size: 1.4rem;
                         line-height: 1.2;
                         text-transform: uppercase;
 
@@ -206,7 +206,7 @@
                 align-items: center;
                 justify-content: flex-end;
 
-                padding-right: 4rem;
+                padding-right: 0;
 
                 @media (max-width: $desktop - 1) {
                     padding-right: 0;
