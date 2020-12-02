@@ -15,7 +15,8 @@ const pages = [
 	path + "profile.html",
 	path + "fundraisers.html",
 	path + "donations.html",
-	path + "refer.html"
+	path + "refer.html",
+	path + "login.html",
 ];
 
 // FOR HTML PAGES

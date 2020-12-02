@@ -149,6 +149,11 @@ var dispatch = {
 			}
 		})();
 
+		// dropdown toggle
+		$('.dropdown-btn').click(function () {
+			$('.dropdown-menu').toggleClass("show");
+		});
+
 		// Mobile Menu
 		$('.menuHandle').click(function (e) {
 			e.preventDefault();

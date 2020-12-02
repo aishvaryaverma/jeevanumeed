@@ -6320,112 +6320,150 @@ select.form-control.customDropdownIcon {
     @media (max-width: 767px) {
       .header__logo {
         padding: 1rem 0; } }
-  .header__links {
-    display: flex; }
-    .header__links ul {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      white-space: nowrap;
-      justify-content: space-between;
-      transition: all 0.25s cubic-bezier(0.61, 0.03, 0.43, 0.9); }
-      .header__links ul > li {
-        position: relative;
+  .header .header__right {
+    display: flex;
+    align-items: center; }
+    .header .header__right .header__menu {
+      display: flex; }
+      .header .header__right .header__menu ul {
         display: flex;
         align-items: center;
-        justify-content: center;
-        padding-right: 2.5rem;
-        border-right: 0.1rem solid #fff;
-        margin-right: 2.5rem; }
-        .header__links ul > li:nth-last-child(2), .header__links ul > li:last-child {
-          padding-right: 0;
-          border-right: none;
-          margin-right: 0; }
-        .header__links ul > li > a {
+        white-space: nowrap;
+        justify-content: space-between;
+        width: 100%;
+        transition: all 0.25s cubic-bezier(0.61, 0.03, 0.43, 0.9); }
+        .header .header__right .header__menu ul > li {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           position: relative;
-          display: block;
-          font-family: "Raleway", sans-serif;
-          font-size: 1.6rem;
-          line-height: 1.2;
-          font-weight: 500;
-          color: #ffffff;
-          letter-spacing: 0.22px;
-          text-transform: uppercase; }
-          @media (max-width: 1023px) {
-            .header__links ul > li > a {
-              padding: 2.5rem;
-              width: 100%; } }
-          .header__links ul > li > a:hover {
-            color: #8cc63e; }
-        .header__links ul > li.donate-btn {
-          padding-left: 2.5rem; }
-          .header__links ul > li.donate-btn a {
-            position: relative;
-            z-index: 1;
-            background: #aee267;
-            background: linear-gradient(180deg, #aee267 0%, #83bd35 100%);
-            padding: 1.5rem 3rem;
-            font-family: "Raleway", sans-serif;
-            color: #121212;
-            font-weight: 700;
-            line-height: 1.2;
-            letter-spacing: 0.3px;
-            text-transform: uppercase;
-            border-radius: 25px;
-            overflow: hidden; }
-            .header__links ul > li.donate-btn a:before {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 0;
-              background: #009afe;
-              transition: all .05s ease-out;
-              z-index: -1; }
-            .header__links ul > li.donate-btn a:hover {
-              color: #ffffff; }
-              .header__links ul > li.donate-btn a:hover:before {
-                height: 100%; }
-            @media (max-width: 1023px) {
-              .header__links ul > li.donate-btn a {
-                padding: 1.5rem;
-                border-radius: 0; } }
-          @media (max-width: 1023px) {
-            .header__links ul > li.donate-btn {
-              padding: 2.5rem; } }
-        @media (max-width: 1279px) {
-          .header__links ul > li {
-            padding-right: 1.5rem;
-            margin-right: 1.5rem; } }
-        @media (max-width: 1023px) {
-          .header__links ul > li {
+          padding-right: 2.5rem;
+          border-right: 0.1rem solid #fff;
+          margin-right: 2.5rem; }
+          .header .header__right .header__menu ul > li:last-child {
             padding-right: 0;
             border-right: none;
-            margin-right: 0;
-            border-bottom: 0.1rem solid #fff; } }
+            margin-right: 0; }
+          .header .header__right .header__menu ul > li > a {
+            position: relative;
+            display: block;
+            font-family: "Raleway", sans-serif;
+            font-size: 1.6rem;
+            line-height: 1.2;
+            font-weight: 500;
+            color: #ffffff;
+            letter-spacing: 0.22px;
+            text-transform: uppercase; }
+            @media (max-width: 1023px) {
+              .header .header__right .header__menu ul > li > a {
+                padding: 2.5rem;
+                width: 100%; } }
+            .header .header__right .header__menu ul > li > a:hover {
+              color: #8cc63e; }
+          @media (max-width: 1279px) {
+            .header .header__right .header__menu ul > li {
+              padding-right: 1.5rem;
+              margin-right: 1.5rem; } }
+          @media (max-width: 1023px) {
+            .header .header__right .header__menu ul > li {
+              padding-right: 0;
+              border-right: none;
+              margin-right: 0;
+              border-bottom: 0.1rem solid #fff; } }
+        @media (max-width: 1023px) {
+          .header .header__right .header__menu ul {
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin-bottom: 0;
+            align-items: normal; } }
       @media (max-width: 1023px) {
-        .header__links ul {
-          flex-direction: column;
-          flex-wrap: wrap;
-          margin-bottom: 0;
-          align-items: normal; } }
-    @media (max-width: 1023px) {
-      .header__links {
-        position: absolute;
-        top: calc(100% + 1px);
-        right: 0;
-        width: 100%;
-        background-color: #009afe;
-        transition: all 0.5s ease;
-        transform-origin: 0 0 0;
-        opacity: 0;
-        visibility: hidden;
-        transform: scaleY(0); }
-        .header__links.open {
-          opacity: 1;
-          visibility: visible;
-          transform: scaleY(1); } }
+        .header .header__right .header__menu {
+          position: absolute;
+          top: calc(100% + 1px);
+          right: 0;
+          width: 100%;
+          background-color: #009afe;
+          transition: all 0.5s ease;
+          transform-origin: 0 0 0;
+          opacity: 0;
+          visibility: hidden;
+          transform: scaleY(0); }
+          .header .header__right .header__menu.open {
+            opacity: 1;
+            visibility: visible;
+            transform: scaleY(1); } }
+    .header .header__right .header__links {
+      display: flex; }
+      .header .header__right .header__links ul {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        justify-content: space-between; }
+        .header .header__right .header__links ul > li {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative; }
+          .header .header__right .header__links ul > li.donate-btn {
+            padding-left: 2.5rem; }
+            .header .header__right .header__links ul > li.donate-btn a {
+              position: relative;
+              z-index: 1;
+              background: #aee267;
+              background: linear-gradient(180deg, #aee267 0%, #83bd35 100%);
+              padding: 1.5rem 3rem;
+              font-size: 1.6rem;
+              font-family: "Raleway", sans-serif;
+              color: #121212;
+              font-weight: 700;
+              line-height: 1.2;
+              letter-spacing: 0.3px;
+              text-transform: uppercase;
+              border-radius: 25px;
+              overflow: hidden; }
+              .header .header__right .header__links ul > li.donate-btn a:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 0;
+                background: #009afe;
+                transition: all .05s ease-out;
+                z-index: -1; }
+              .header .header__right .header__links ul > li.donate-btn a:hover {
+                color: #ffffff; }
+                .header .header__right .header__links ul > li.donate-btn a:hover:before {
+                  height: 100%; }
+              @media (max-width: 1023px) {
+                .header .header__right .header__links ul > li.donate-btn a {
+                  padding: 1.5rem;
+                  border-radius: 0; } }
+            @media (max-width: 1023px) {
+              .header .header__right .header__links ul > li.donate-btn {
+                padding: 2.5rem; } }
+          .header .header__right .header__links ul > li .dropdown-btn {
+            color: #ffffff;
+            margin-left: 2.5rem; }
+            .header .header__right .header__links ul > li .dropdown-btn i {
+              font-size: 2.5rem; }
+              .header .header__right .header__links ul > li .dropdown-btn i:last-child {
+                margin-left: 1rem; }
+          .header .header__right .header__links ul > li .dropdown-menu {
+            left: auto;
+            right: 0; }
+            .header .header__right .header__links ul > li .dropdown-menu.show {
+              display: block; }
+            .header .header__right .header__links ul > li .dropdown-menu a {
+              color: #000;
+              display: block;
+              width: 100%;
+              padding: .25rem 1.5rem;
+              clear: both;
+              font-weight: 400;
+              white-space: nowrap;
+              font-size: 1.6rem;
+              border: 0; }
   .header .menuHandle {
     display: none; }
     @media (max-width: 992px) {
@@ -7983,6 +8021,19 @@ select.form-control.customDropdownIcon {
         border-radius: 0; } }
   .startFundraiser__form .form-group {
     margin-bottom: 4rem; }
+  .startFundraiser__form h5 {
+    font-size: 1.8rem;
+    line-height: 24px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    color: #000;
+    letter-spacing: -.5px;
+    text-align: center; }
+    .startFundraiser__form h5 a {
+      display: inline-block;
+      text-decoration: none;
+      color: #8cc63e; }
   .startFundraiser__form .btn-primary {
     padding: 1.5rem 7.5rem;
     border-radius: 3.5rem;
@@ -9260,5 +9311,8 @@ select.form-control.customDropdownIcon {
                     color: #21936a !important; }
                   .dashboardContent__content .dashboardContent__main .dashboardContent__sidebar .sidebarBox__checklist .checklist__body .checklist__listGroup .checklist__listItem .checklist__listStatus i.text--disabled {
                     color: #eee !important; }
+
+.startFundraiser.login {
+  transform: translateY(-75%); }
 
 /*# sourceMappingURL=style.min.css.map */
